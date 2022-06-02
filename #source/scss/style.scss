@@ -1,4 +1,5 @@
 :root {
+
   /* Fonts */
   --montserrat: 'Montserrat', sans-serif;
   --arial: "ArialRegular", sans-serif;
@@ -12,19 +13,14 @@
   --montserrat-font-weight: 500;
   --semiBold-font-weight: 600;
 
-  
   /* Colors */
-
   --regular-textColor1: #F5F5F5;
   --regular-textColor2: rgba(51, 51, 51, 1); 
   --regular-textColor3: rgba(74, 74, 74, 1);
   --h2-textColor: #333333;
   --h3-textColor: rgba(79, 79, 79, 1);
- 
-
   --orange-button: #FF6A00;
-  --orange-border: rgba(233, 117, 34, 1);
-
+  --orange-border: rgba(233, 117, 34, 1)
 }
 
 @mixin montserrat-regular-text ($color) {
@@ -36,11 +32,6 @@
   color: $color;
 }
 
-// p {
-//   @include montserrat-regular-text (var(--regular-textColor3));
-// }
-
-
 %steps-work {
   font-family: var(--montserrat);
   font-style: normal;
@@ -50,10 +41,136 @@
   color: var(--regular-textColor3);
 }
 
+// TO %
+@function prc($pxOne, $pxTwo) {
+  $result: ($pxOne / $pxTwo) * 100%;
+  @return $result;
+}
+// REM %
+@function rem($px) {
+  $result: $px / 16 + rem;
+  @return $result;
+}
+// EM % 
+@function em($px) {
+  $result: $px / 16 + em;
+  @return $result;
+}
+
+// p {
+//   @include montserrat-regular-text (var(--regular-textColor3));
+// }
+
+
 // p {
 //   @extend %step-work;
 // }
 
+.container {
+  margin: 0 auto;
+  max-width: rem(1240);
+}
 
 
+.header {
 
+  &__wrapper {
+    min-height: rem(80);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+  }
+
+  &__logo-img {
+  }
+
+  &__nav {
+    display: block;
+  }
+
+  &__nav-list {
+    display: flex;
+  }
+
+  &__nav-item {
+    margin: 0 16px;
+  }
+
+  &__nav-link {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--montserrat-font-weight);
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--regular-textColor3);
+    padding: 10px 0;
+  }
+
+  &__nav-link:active {
+    color: var(--orange-border);
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: rem(348);
+    height: rem(31);
+  }
+
+  &__contacts-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px;
+    gap: 10px;
+    width: rem(196);
+    height: rem(31);
+    border: 2px solid var(--orange-border);
+    border-radius: 10px;
+    background-color: transparent;
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--montserrat-font-weight);
+    font-size: 12px;
+    line-height: rem(15);
+    letter-spacing: 1px;
+    color: var(--orange-border);
+  }
+
+  &__contacts-btn:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--orange-border);
+  }
+
+  &__contacts-btn:active {
+    width: rem(173);
+    height: rem(28);
+    margin-left: 10px;
+  }
+
+  &__contacts-number {
+    width: rem(128);
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--semiBold-font-weight);
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--regular-textColor3);
+  }
+
+  &__burger-btn {
+    display: none;
+  }
+}
+
+.main {
+  background-color: rgba(68, 68, 68, 1);
+  height: 1000px;
+
+}

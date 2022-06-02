@@ -16,5 +16,115 @@
   --h2-textColor: #333333;
   --h3-textColor: rgba(79, 79, 79, 1);
   --orange-button: #FF6A00;
-  --orange-border: rgba(233, 117, 34, 1);
+  --orange-border: rgba(233, 117, 34, 1) ;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 77.5rem;
+}
+
+.header__wrapper {
+  min-height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__nav {
+  display: block;
+}
+.header__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__nav-item {
+  margin: 0 16px;
+}
+.header__nav-link {
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: var(--montserrat-font-weight);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--regular-textColor3);
+  padding: 10px 0;
+}
+.header__nav-link:active {
+  color: var(--orange-border);
+}
+.header__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 21.75rem;
+  height: 1.9375rem;
+}
+.header__contacts-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 24px;
+  gap: 10px;
+  width: 12.25rem;
+  height: 1.9375rem;
+  border: 2px solid var(--orange-border);
+  border-radius: 10px;
+  background-color: transparent;
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: var(--montserrat-font-weight);
+  font-size: 12px;
+  line-height: 0.9375rem;
+  letter-spacing: 1px;
+  color: var(--orange-border);
+}
+.header__contacts-btn:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: var(--orange-border);
+}
+.header__contacts-btn:active {
+  width: 10.8125rem;
+  height: 1.75rem;
+  margin-left: 10px;
+}
+.header__contacts-number {
+  width: 8rem;
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: var(--semiBold-font-weight);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--regular-textColor3);
+}
+.header__burger-btn {
+  display: none;
+}
+
+.main {
+  background-color: #444444;
+  height: 1000px;
 }
