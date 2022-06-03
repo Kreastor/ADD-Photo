@@ -1,5 +1,4 @@
 :root {
-
   /* Fonts */
   --montserrat: 'Montserrat', sans-serif;
   --arial: "ArialRegular", sans-serif;
@@ -71,8 +70,9 @@
   max-width: rem(1240);
 }
 
-
 .header {
+  // margin: 0 auto;
+  // max-width: rem(1440);
 
   &__wrapper {
     min-height: rem(80);
@@ -140,6 +140,7 @@
     line-height: rem(15);
     letter-spacing: 1px;
     color: var(--orange-border);
+    transition: 0.2s;
   }
 
   &__contacts-btn:hover {
@@ -151,7 +152,9 @@
   &__contacts-btn:active {
     width: rem(173);
     height: rem(28);
-    margin-left: 10px;
+    margin: 2px 0 2px 10px;
+    font-size: 10px;
+    line-height: rem(12);
   }
 
   &__contacts-number {
@@ -169,8 +172,246 @@
   }
 }
 
-.main {
-  background-color: rgba(68, 68, 68, 1);
-  height: 1000px;
+// -------------------------------------------------------------------------Start-scren------------------------------------------------------------ 
 
+.main {
+  display: flex;
+  flex-direction: column;
+
+  // &__start-screen {
+  // }
+}
+
+// .start {
+
+//   &__start-screen {
+//   }
+// }
+
+.start-screen {
+  background-color: rgb(68, 68, 68);
+
+  &__article {
+    position: relative;
+    max-width: rem(820);
+    margin: rem(149) 0 rem(141) 0;
+    z-index: 1;
+  }
+
+  &__article::before {
+    content: "";
+    background: url(../img/Polygon1.png) 0 0 / 75% no-repeat;
+    position: absolute;
+    left: 70%;
+    top: 30%;
+    width: prc(180, 820);
+    padding-top: prc(180, 555);
+    z-index: -1;
+  }
+
+  &__heading {
+    width: prc(770, 820);
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(15px + 34 * (100vw / 1280));
+    line-height: calc(30px + 31 * (100vw / 1280)); 
+    color: var(--regular-textColor1);
+  }
+
+  &__heading::first-line {
+    letter-spacing: 3px;
+  }
+
+  &__sub-heading {
+    margin-top: 50px;
+    max-width: rem(733);
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--semiBold-font-weight);
+    font-size: calc(15px + 14 * (100vw / 1280)); 
+    line-height: calc(30px + 10 * (100vw / 1280)); 
+    color: var(--regular-textColor1);
+  }
+
+  &__text {
+    margin-top: 24px;
+    max-width: rem(780);
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--montserrat-font-weight);
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(245, 245, 245, 1);
+    
+  }
+
+  &__get-consultation-btn {
+    margin-top: 31px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: calc(12px + 6 * (100vw / 1280)) calc(12px + 13 * (100vw / 1280));
+    gap: 10px;
+    background: linear-gradient(180deg, #FFA96B -21.43%, #EE7A28 100%);
+    border-color: #EE7A28;
+    border-radius: 10px;
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--semiBold-font-weight);
+    font-size: calc(12px + 2 * (100vw / 1280));
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 0.2s;
+  }
+
+  &__get-consultation-btn:hover {
+    cursor: pointer;
+    background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+  }
+
+  &__get-consultation-btn:active {
+    cursor: pointer;
+    background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2px;
+    padding: calc(12px + 6 * (100vw / 1280)) calc(12px + 13 * (100vw / 1280));
+  }
+}
+
+.feedback-form {
+  display: none;
+  position: absolute;
+  left: 102.5px;
+  top: 0;
+  width: rem(1035);
+  height: rem(560);
+  background-color: #fff;  
+
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+  &__container-left {
+    width: rem(454.64);
+    height: rem(415.34);
+    margin: 90px auto 53px;
+  }
+
+  &__img {
+  }
+
+
+  &__container-right {
+    width: rem(480);
+    height: rem(440);
+    margin: 60px auto;
+  }
+
+  &__heading {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--semiBold-font-weight);
+    font-size: var(--semiBold-font-size);
+    line-height: 120%;
+    color: var(--regular-textColor3);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin: 32px auto 16px;
+    width: rem(420);
+  }
+
+  &__form-name {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__form-e-mail {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__form-tel {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__label {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--montserrat-font-weigh);
+    font-size: var(--regular-font-size);
+    line-height: 12px;
+    color: #121621;
+    opacity: 0.4;
+  }
+
+  &__input {
+    padding: 18px 0 18px 16px;
+    border: 1px solid #DDDEE4;
+    border-radius: 5px;
+  }
+
+  &__input::placeholder {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--montserrat-font-weigh);
+    font-size: 12px;
+    line-height: 12px;
+    color: #B1B1B1;
+    opacity: 0.4;
+  }
+
+
+  &__input-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 144px;
+    background: linear-gradient(180deg, #FFA96B -21.43%, #EE7A28 100%);
+    border-radius: 10px;
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--semiBold-font-weight);
+    font-size: var(--regular-font-size);
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 0.2s;
+  }
+
+  &__input-btn:hover {
+    cursor: pointer;
+    background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+  }
+
+  &__input-btn:active {
+    cursor: pointer;
+    background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+    font-size: var(--regular-font-size);
+    line-height: 17px;
+    letter-spacing: 2px;
+    padding: 14px 138px;
+  }
+
+  &__instruction {
+  }
 }
