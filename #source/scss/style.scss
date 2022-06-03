@@ -284,3 +284,134 @@
   }
 }
 
+.feedback-form {
+  display: none;
+  position: absolute;
+  left: 102.5px;
+  top: 0;
+  width: rem(1035);
+  height: rem(560);
+  background-color: #fff;  
+
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+  &__container-left {
+    width: rem(454.64);
+    height: rem(415.34);
+    margin: 90px auto 53px;
+  }
+
+  &__img {
+  }
+
+
+  &__container-right {
+    width: rem(480);
+    height: rem(440);
+    margin: 60px auto;
+  }
+
+  &__heading {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--semiBold-font-weight);
+    font-size: var(--semiBold-font-size);
+    line-height: 120%;
+    color: var(--regular-textColor3);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin: 32px auto 16px;
+    width: rem(420);
+  }
+
+  &__form-name {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__form-e-mail {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__form-tel {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__label {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--montserrat-font-weigh);
+    font-size: var(--regular-font-size);
+    line-height: 12px;
+    color: #121621;
+    opacity: 0.4;
+  }
+
+  &__input {
+    padding: 18px 0 18px 16px;
+    border: 1px solid #DDDEE4;
+    border-radius: 5px;
+  }
+
+  &__input::placeholder {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--montserrat-font-weigh);
+    font-size: 12px;
+    line-height: 12px;
+    color: #B1B1B1;
+    opacity: 0.4;
+  }
+
+
+  &__input-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 144px;
+    background: linear-gradient(180deg, #FFA96B -21.43%, #EE7A28 100%);
+    border-radius: 10px;
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--semiBold-font-weight);
+    font-size: var(--regular-font-size);
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 0.2s;
+  }
+
+  &__input-btn:hover {
+    cursor: pointer;
+    background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+  }
+
+  &__input-btn:active {
+    cursor: pointer;
+    background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+    font-size: var(--regular-font-size);
+    line-height: 17px;
+    letter-spacing: 2px;
+    padding: 14px 138px;
+  }
+
+  &__instruction {
+  }
+}
