@@ -58,7 +58,9 @@
           и еще не раз захотите возвращаться к нам. </p>
           <button class="start-screen__get-consultation-btn">Получить консультацию</button>
           <section class="start-screen__feedback-form feedback-form">
-          <!-- TODO: add close btn -->
+            <button class="feedback-form__close-btn"> 
+              <img class="feedback-form__close-btn-icon" src="img/close-btn.png" alt="close button img">
+            </button>
             <div class="feedback-form__wrapper">
               <div class="feedback-form__container-left">
                 <img class="feedback-form__img" src="img/Group 1846.png" alt="feedback form img">
@@ -78,19 +80,68 @@
                     <label class="feedback-form__label" for="first-page-tel">Телефон</label>
                     <input class="feedback-form__input" type="tel" id="first-page-tel" name="tel" placeholder="Введите ваш Телефон">
                   </div>
-                  <input class="feedback-form__input-btn" type="submit" value="Отправить">
+                  <input class="feedback-form__input-btn" type="button" value="Отправить">
                 </form>
                 <p class="feedback-form__instruction">Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности </p>
               </div>
             </div>
           </section>
+          <section class="feedback-form__block-thanks application-feedback">
+            <button class="feedback-form__close-btn"> 
+              <img class="feedback-form__close-btn-icon" src="img/close-btn.png" alt="close button img">
+            </button>
+            <article class="application-feedback__article">
+              <h1 class="application-feedback__article-heading">Благодарим <br> за оставленную заявку!</h1>
+              <h4 class="application-feedback__article-sub-heading">Наши специалисты уже обрабатывают <br> 
+                Вашу заявку и свяжутся с Вами в ближайшее время</h4>
+            </article>
+          </section>
         </article>
       </div>
+    </section>
+    <section class="main__our-works our-works">
+      <article class="our-works__content">
+        <h1 class="our-works__header">Наши работы</h1>
+        <div class="our-works__slider">
+          <div class="our-works__slider-wrapper">
+            <img class="our-works__slider-img" src="img/Pic-left.png" alt="Pic-left">
+            <img class="our-works__slider-img center-img" src="img/Pic-center.png" alt="Pic-center">
+            <img class="our-works__slider-img" src="img/Pic-right.png" alt="Pic-right">
+            <img class="our-works__slider-img" src="img/Pic-left.png" alt="Pic-left">
+            <img class="our-works__slider-img" src="img/Pic-center.png" alt="Pic-center">
+            <img class="our-works__slider-img" src="img/Pic-right.png" alt="Pic-right">
+            <img class="our-works__slider-img" src="img/Pic-left.png" alt="Pic-left">
+            <img class="our-works__slider-img" src="img/Pic-center.png" alt="Pic-center">
+            <img class="our-works__slider-img" src="img/Pic-right.png" alt="Pic-right">
+            <img class="our-works__slider-img" src="img/Pic-left.png" alt="Pic-left">
+          </div>
+          <button class="our-works__slider-btn-prev"></button>
+          <button class="our-works__slider-btn-next"></button>
+        </div>
+      </article>
+      <section class="our-works__popup">
+        <div class="our-works__popup-slider">
+          <div class="our-works__popup-slider-wrapper">
+            <img class="our-works__popup-slider-img" src="img/Pic-left.png" alt="Pic-left">
+            <img class="our-works__popup-slider-img" src="img/Pic-center.png" alt="Pic-center">
+            <img class="our-works__popup-slider-img" src="img/Pic-right.png" alt="Pic-right">
+            <img class="our-works__popup-slider-img" src="img/Pic-left.png" alt="Pic-left">
+            <img class="our-works__popup-slider-img" src="img/Pic-center.png" alt="Pic-center">
+            <img class="our-works__popup-slider-img" src="img/Pic-right.png" alt="Pic-right">
+            <img class="our-works__popup-slider-img" src="img/Pic-left.png" alt="Pic-left">
+            <img class="our-works__popup-slider-img" src="img/Pic-center.png" alt="Pic-center">
+            <img class="our-works__popup-slider-img" src="img/Pic-right.png" alt="Pic-right">
+            <img class="our-works__popup-slider-img" src="img/Pic-left.png" alt="Pic-left">
+          </div>
+        </div>
+        <button class="our-works__popup-slider-btn-prev"></button>
+        <button class="our-works__popup-slider-btn-next"></button>
+      </section>
     </section>
   </main>
 
   <script src="js/button-func.js"></script>
-  
+  <script src="js/slider-func.js"></script>
   
 </body>
 </html> 

@@ -1,3 +1,14 @@
 .show {
   display: block;
 }
+
+.close {
+  display: none;
+}
+
+.center-img {
+  margin: 0 -32px;
+  width: 34.731875rem;
+  height: 38.625rem;
+  z-index: 1;
+}
