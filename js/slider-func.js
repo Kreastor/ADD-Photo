@@ -3,7 +3,7 @@ const sliderWrapper = document.querySelector(".our-works__slider-wrapper");
 const btnPrev = document.querySelector(".our-works__slider-btn-prev");
 const btnNext = document.querySelector(".our-works__slider-btn-next");
 let count = 1;
-let width = sliderWrapper.offsetWidth;
+const width = sliderWrapper.offsetWidth;
 
 function disabled() {
   if (count === images.length - 1) {
@@ -20,11 +20,10 @@ function disabled() {
 };
 
 btnPrev.addEventListener("click", () => {
-  if (count === images.length - 1) {
-    sliderWrapper.style.transform = "";
-  } else {
-  sliderWrapper.style.transform = `translate(${width/3+"px"})`;
-  }
+
+
+  sliderWrapper.style.transform = `translate(${-width/3 * (count-2) +"px"})`;
+  console.log(sliderWrapper.style.transform);
 
   images[count].classList.remove("center-img");
   count--;
@@ -34,12 +33,9 @@ btnPrev.addEventListener("click", () => {
 })
 
 btnNext.addEventListener("click", () => {
-  disabled();
-  if (count === 0) {
-    sliderWrapper.style.transform = "";
-  } else {
-  sliderWrapper.style.transform = `translate(${-width/3+"px"})`;
-  }
+
+  sliderWrapper.style.transform = `translate(${-width/3 * count +"px"})`;
+  console.log(sliderWrapper.style.transform);
 
   images[count].classList.remove("center-img");
   count++;
