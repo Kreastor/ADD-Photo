@@ -1,7 +1,30 @@
+// TO %
+@function prc($pxOne, $pxTwo) {
+  $result: ($pxOne / $pxTwo) * 100%;
+  @return $result;
+}
+// REM %
+@function rem($px) {
+  $result: $px / 16 + rem;
+  @return $result;
+}
+// EM % 
+@function em($px) {
+  $result: $px / 16 + em;
+  @return $result;
+}
+
 .show {
   display: block;
 }
 
 .close {
   display: none;
+}
+
+.center-img {
+    margin: 0 -32px;
+    width: rem(555.71);
+    height: rem(618);
+    z-index: 1;
 }
