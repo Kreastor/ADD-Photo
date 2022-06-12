@@ -12,3 +12,7 @@
   height: 38.625rem;
   z-index: 1;
 }
+
+.center-img:hover {
+  cursor: pointer;
+}

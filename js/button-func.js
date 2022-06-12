@@ -1,3 +1,5 @@
+"use strict"
+
 const getConsultation = document.querySelector(".start-screen__get-consultation-btn");
 const feedbackForm = document.querySelector(".feedback-form");
 
@@ -27,3 +29,32 @@ for(let i = 0; i < closeBtn.length; i++) {
       }
   });
 };
+
+const centerSlideImg = document.querySelectorAll(".our-works__slider-img");
+const popUp = document.querySelector(".our-works__popup");
+
+import {disabled} from './slider-func.js';
+
+for (let i = 0; i < centerSlideImg.length; i++) {
+  centerSlideImg[i].addEventListener("click", () => {
+    if (centerSlideImg[i].classList.contains("center-img")) {
+      popUp.style.display="block";
+      disabled();
+    } else {
+      popUp.style.display="";
+    }
+  });
+};
+
+const popupBackground = document.querySelector(".our-works__popup");
+
+// popupBackground.addEventListener("click", () => {
+//   popUp.style.display="";
+// })
+
+
+
+
+
+
+
