@@ -76,7 +76,7 @@ const slides = document.querySelectorAll(".our-works__popup-slide");
 const popUpSliderWrapper = document.querySelector(".our-works__popup-slider-wrapper");
 const popUpBtnPrev = document.querySelector(".our-works__popup-slider-btn-prev");
 const popUpBtnNext = document.querySelector(".our-works__popup-slider-btn-next");
-let popUpCount = 2;
+let popUpCount = 1;
 const popUpWidth = popUpSliderWrapper.offsetWidth;
 
 for (let i = 0; i < centerSlideImg.length; i++) {
@@ -97,11 +97,8 @@ for (let i = 0; i < centerSlideImg.length; i++) {
       });
       popUpBtnNext.addEventListener("click", () => {
         console.log(popUpSliderWrapper.style.transform );
-        popUpSliderWrapper.style.transform = `translate("-680px")`;
-
-        popUpCount++;
         popUpSliderWrapper.style.transform = `translate(${-popUpWidth * popUpCount +"px"})`;
-        console.log(popUpSliderWrapper.style.transform);
+        popUpCount++;
         disabledBTN();
         console.log(popUpCount);
       });
