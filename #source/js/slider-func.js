@@ -1,4 +1,9 @@
 "use strict"
+import {popUpCount} from './button-func.js';
+import {slides} from './button-func.js';
+// import {popUpSliderWrapper} from './button-func.js';
+import {popUpBtnPrev} from './button-func.js';
+import {popUpBtnNext} from './button-func.js';
 
 // Our works slider 
 
@@ -39,23 +44,13 @@ btnNext.addEventListener("click", () => {
 
 
 // Our works popUp slider 
+// const slides = document.querySelectorAll(".our-works__popup-slide");
+// const popUpSliderWrapper = document.querySelector(".our-works__popup-slider-wrapper");
+// const popUpBtnPrev = document.querySelector(".our-works__popup-slider-btn-prev");
+// const popUpBtnNext = document.querySelector(".our-works__popup-slider-btn-next");
+// let popUpCount = 1;
+// const popUpWidth = popUpSliderWrapper.offsetWidth;
 
-const slides = document.querySelectorAll(".our-works__popup-slide");
-const popUpSliderWrapper = document.querySelector(".our-works__popup-slider-wrapper");
-const popUpBtnPrev = document.querySelector(".our-works__popup-slider-btn-prev");
-const popUpBtnNext = document.querySelector(".our-works__popup-slider-btn-next");
-let popUpCount = 1;
-const popUpWidth = popUpSliderWrapper.offsetWidth;
 
 
-popUpBtnPrev.addEventListener("click", () => {
-  popUpSliderWrapper.style.transform = `translate(${-popUpWidth * (popUpCount-2) +"px"})`;
-  popUpCount--;
-  disabled();
-});
-
-popUpBtnNext.addEventListener("click", () => {
-  popUpSliderWrapper.style.transform = `translate(${-popUpWidth * popUpCount +"px"})`;
-  popUpCount++;
-  disabled();
-});
+// popupSlider();
