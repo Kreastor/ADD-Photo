@@ -1,3 +1,5 @@
+"use strict"
+
 const getConsultation = document.querySelector(".start-screen__get-consultation-btn");
 const feedbackForm = document.querySelector(".feedback-form");
 
@@ -27,3 +29,12 @@ for(let i = 0; i < closeBtn.length; i++) {
       }
   });
 };
+
+
+
+
+
+
+
+
+

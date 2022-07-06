@@ -10,5 +10,9 @@
   margin: 0 -32px;
   width: 34.731875rem;
   height: 38.625rem;
-  z-index: 1;
+  z-index: 0;
+}
+
+.center-img:hover {
+  cursor: pointer;
 }
