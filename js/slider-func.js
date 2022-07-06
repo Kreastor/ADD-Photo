@@ -1,8 +1,8 @@
 "use strict"
-document.body.addEventListener("click", (event) => {
-  let target = event.target;
-  console.log(target);
-})
+// document.body.addEventListener("click", (event) => {
+//   let target = event.target;
+//   console.log(target);
+// })
 
 // Our works slider 
 const images = document.querySelectorAll(".our-works__slider-img");
@@ -54,7 +54,9 @@ for (let i = 0; i < centerSlideImg.length; i++) {
   centerSlideImg[i].addEventListener("click", event => {
     let target = event.target;
     if (target.classList.contains("center-img")) {
-      // document.body.style.overflow="hidden";
+      let scroll = document.querySelector('.our-works__popup-slider');
+      scroll.scrollIntoView({block: "center"});
+      document.body.style.overflow="hidden";
       popUp.style.visibility="visible";
       popUp.style.background ="#8e8e8dba";
     } else {
@@ -69,7 +71,8 @@ function disabled() {
 };
 
 popUp.addEventListener("click", (event) => {
-  let target = event.target
+  let target = event.target;
+
   if (target.classList.contains("our-works__popup-slide-img") 
   || target.classList.contains("our-works__content") 
   || target.classList.contains("our-works__popup-slide")
@@ -78,6 +81,7 @@ popUp.addEventListener("click", (event) => {
   || target.classList.contains("our-works__popup-slider-btn-next")) {
     return;
   }
+
   popUp.style.visibility="hidden";
   document.body.style.overflow="";
   popUp.style.backgroundColor ="";

@@ -660,6 +660,8 @@
           align-items: center;
   width: inherit;
   height: inherit;
+  -webkit-transform: translateY(5%);
+          transform: translateY(5%);
 }
 .our-works__popup-slider {
   max-width: 43.3125rem;
