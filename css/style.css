@@ -639,11 +639,11 @@
 }
 .our-works__popup {
   position: absolute;
-  display: none;
+  display: block;
   width: 100%;
   height: 100%;
   background-color: #ffffff;
-  z-index: 5;
+  visibility: hidden;
 }
 .our-works__popup:hover {
   cursor: pointer;
@@ -674,6 +674,8 @@
   transition: -webkit-transform 1s ease;
   transition: transform 1s ease;
   transition: transform 1s ease, -webkit-transform 1s ease;
+  -webkit-transform: translate(-43.3rem);
+          transform: translate(-43.3rem);
 }
 .our-works__popup-slide {
   display: -webkit-box;
