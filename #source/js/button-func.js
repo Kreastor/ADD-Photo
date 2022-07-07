@@ -5,6 +5,8 @@ const feedbackForm = document.querySelector(".feedback-form");
 
 
 getConsultation.addEventListener("click", () => {
+  let scroll = document.querySelector(".start-screen");
+  scroll.scrollIntoView({block: "center", behavior: "smooth"});
   feedbackForm.classList.toggle("show");
   if (applicationFeedback.classList.contains("show")) {
     applicationFeedback.classList.remove("show");
