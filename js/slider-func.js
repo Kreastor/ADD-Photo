@@ -149,7 +149,6 @@ for (let i = 0; i < slideImg2.length; i++) {
       scroll2.scrollIntoView({block: "center"});
       document.body.style.overflow="hidden";
       popUp2.style.visibility="visible";
-      popUp2.style.background ="#8e8e8dba";
   })
 }
 
@@ -167,5 +166,4 @@ popUp2.addEventListener("click", (event) => {
 
   popUp2.style.visibility="hidden";
   document.body.style.overflow="";
-  popUp2.style.backgroundColor ="";
 })
