@@ -382,7 +382,6 @@
     opacity: 0.4;
   }
 
-
   &__input-btn {
     display: flex;
     justify-content: center;
@@ -436,8 +435,31 @@
   width: rem(622);
   height: rem(331);
   position: absolute;
-  left: 45%;
-  top: 20%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 5;
+
+  &__close-btn {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    background-color: #D8D8D8;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    padding: 10px;
+  }
+
+  &__close-btn:hover {
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: #EE7A28;
+  }
+
+  &__close-btn:active {
+    cursor: pointer;
+    background-color: #5e545e;
+  }
 
   &__article {
     display: flex;
@@ -765,7 +787,6 @@
   &__popup-slider-btn-next:disabled::before {
     content: url(../img/btn/arrow-right-active.png);
   }
-
 }
 
 // -------------------------------------------------------------------------Our-location------------------------------------------------------------ 
@@ -1108,6 +1129,263 @@
     line-height: 19px;
     letter-spacing: 2px;
     padding: 20px 40px;
+  }
+}
+
+.form-section {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: rem(1033);
+  height: rem(670);
+  background-color: #fff;  
+  border-radius: 15px;
+  border: 5px solid #B1B1B1;
+
+  &__close-btn {
+    padding: 10px;
+    position: absolute;
+    right: -10px;
+    top: -50px;
+    background-color: #D8D8D8;
+    border: 1px solid transparent;
+    border-radius: 100%;
+  }
+
+  &__close-btn:hover {
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: #EE7A28;
+  }
+
+  &__close-btn:active {
+    cursor: pointer;
+    background-color: #5e545e;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 20px;
+  }
+
+  &__container-left {
+    width: rem(449);
+    height: rem(474);
+    margin: 60px 5px 55px 25px;
+  }
+
+  &__container-right {
+    width: rem(480);
+    height: rem(536);
+    margin: 53px 10px;
+  }
+
+  &__heading {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--semiBold-font-weight);
+    font-size: var(--semiBold-font-size);
+    line-height: 120%;
+    color: var(--regular-textColor3);
+    transform: translateX(10px);
+    width: 464px;
+    height: 43px;
+    margin-left: -10px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin: 32px 25px 4px;
+    width: rem(420);
+    height: rem(408);
+  }
+
+  &__form-name {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__form-e-mail {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__form-tel {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__form-location {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__label {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--montserrat-font-weigh);
+    font-size: var(--regular-font-size);
+    line-height: 12px;
+    color: #121621;
+    opacity: 0.4;
+  }
+
+  &__input {
+    padding: 14px 0 14px 14px;
+    border: 1px solid #DDDEE4;
+    border-radius: 5px;
+  }
+
+  &__input::placeholder {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--montserrat-font-weigh);
+    font-size: 12px;
+    line-height: 12px;
+    color: #B1B1B1;
+    opacity: 0.4;
+  }
+
+  &__input--select {
+    padding: 14px 0 14px 14px;
+    border: 1px solid #DDDEE4;
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+  }
+
+  &__option {
+    width: 420px;
+    height: 40px;
+    padding: 16px;
+    background-color: #fff;
+  }
+
+  &__input-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 144px;
+    background: linear-gradient(180deg, #FFA96B -21.43%, #EE7A28 100%);
+    border-radius: 10px;
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--semiBold-font-weight);
+    font-size: var(--regular-font-size);
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 0.2s;
+    margin-top: 15px;
+    border-color: transparent;;
+  }
+
+  &__input-btn:hover {
+    cursor: pointer;
+    background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+  }
+
+  &__input-btn:active {
+    cursor: pointer;
+    background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+    font-size: var(--regular-font-size);
+    line-height: 17px;
+    letter-spacing: 2px;
+    padding: 14px 138px;
+  }
+
+  &__instruction {
+    width: 470px;
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--montserrat-font-weigh);
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: rgba(88, 88, 88, 1);
+    padding-top: 5px;
+  }
+}
+
+.application-feedback2 {
+  display: none;
+  background-image: url(../img/application-feedback-bg.png);
+  width: rem(622);
+  height: rem(331);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 5;
+  border-radius: 20px;
+  border: 5px solid #B1B1B1;
+
+  &__close-btn {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    background-color: #D8D8D8;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    padding: 10px;
+  }
+
+  &__close-btn:hover {
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: #EE7A28;
+  }
+
+  &__close-btn:active {
+    cursor: pointer;
+    background-color: #5e545e;
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 24px;
+    margin-top: 90px;
+  }
+
+  &__article-heading {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--semiBold-font-weight);
+    font-size: var(--semiBold-font-size);
+    line-height: 120%;
+    text-align: center;
+    color: var(--regular-textColor3);
+  }
+
+  &__article-sub-heading {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--montserrat-font-weigh);
+    font-size: var(--regular-font-size);
+    line-height: 22px;
+    color: #121621;
+    opacity: 0.4;
   }
 }
 
