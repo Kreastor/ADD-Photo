@@ -32,7 +32,14 @@ for(let i = 0; i < closeBtn.length; i++) {
   });
 };
 
+// -----------------------------------------------------studio-decoration---------------------------------------------- 
 
+const videoСontainer = document.querySelector(".studio-decoration__video-container");
+videoСontainer.addEventListener("click", (event) => {
+  let video = document.querySelector(".studio-decoration__video");
+  video.style.visibility ="visible";
+  videoСontainer.style.visibility ="hidden";
+})
 
 
 

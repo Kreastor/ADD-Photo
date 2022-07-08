@@ -1109,6 +1109,63 @@
     letter-spacing: 2px;
     padding: 20px 40px;
   }
+}
+
+// -------------------------------------------------------------------------studio-decoration------------------------------------------------------------ 
+
+.studio-decoration {
+  max-width: 1440px;
+  height: 908px;
+  margin: 0 auto;
+
+  &__content {
+  }
+
+  &__header {
+    margin-top: 60px;
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--semiBold-font-weight);
+    font-size: 36px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--regular-textColor2);
+  }
+
+  &__video-container {
+    position: relative;
+    margin-top: 80px;
+    width: 1440px;
+    height: 674px;
+    background-color: rgba(153, 153, 153, 1);
+  }
+
+  &__video-container::before {
+    content: url(../img/polygon2.png);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-32%, -50%);
+    cursor: pointer;
+  }
+
+  &__video-container:hover::before {
+    content: url(../img/polygon1.png);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-32%, -50%);
+  }
+  
+  &__video {
+    position: relative;
+    visibility: hidden;
+    margin-top: 80px;
+    width: inherit;
+    height: inherit;
+  }
+
 
 }
+
 
