@@ -86,18 +86,18 @@
               </div>
             </div>
           </section>
-          <section class="feedback-form__block-thanks application-feedback">
-            <button class="feedback-form__close-btn"> 
-              <img class="feedback-form__close-btn-icon" src="img/close-btn.png" alt="close button img">
-            </button>
-            <article class="application-feedback__article">
-              <h1 class="application-feedback__article-heading">Благодарим <br> за оставленную заявку!</h1>
-              <h4 class="application-feedback__article-sub-heading">Наши специалисты уже обрабатывают <br> 
-                Вашу заявку и свяжутся с Вами в ближайшее время</h4>
-            </article>
-          </section>
         </article>
       </div>
+      <section class="application-feedback">
+        <button class="application-feedback__close-btn"> 
+          <img class="application-feedback__close-btn-icon" src="img/close-btn.png" alt="close button img">
+        </button>
+        <article class="application-feedback__article">
+          <h1 class="application-feedback__article-heading">Благодарим <br> за оставленную заявку!</h1>
+          <h4 class="application-feedback__article-sub-heading">Наши специалисты уже обрабатывают <br> 
+            Вашу заявку и свяжутся с Вами в ближайшее время</h4>
+        </article>
+      </section>
     </section>
     <section class="main__our-works our-works">
       <article class="our-works__content">
@@ -165,8 +165,6 @@
               </figure>  
             </div>
           </div>
-          <!-- <button class="our-works__popup-slider-btn-prev"></button>
-          <button class="our-works__popup-slider-btn-next"></button> -->
         </div>
       </section>
     </section>
@@ -216,19 +214,64 @@
               </figure>
             </div>
           </div>
-          <!-- <button class="our-works__popup-slider-btn-prev"></button>
-          <button class="our-works__popup-slider-btn-next"></button> -->
         </div>
       </section>
       <button class="our-location__choose-location-btn">Выбрать локацию</button>
-      <!-- ! TODO: make form -->
+      <section class="our-location__form-section form-section">
+        <button class="form-section__close-btn"> 
+          <img class="form-section__close-btn-icon" src="img/close-btn.png" alt="close button img">
+        </button>
+        <div class="form-section__wrapper">
+          <div class="form-section__container-left">
+            <img class="form-section__img" src="img/group-1844.png" alt="feedback form img">
+          </div>
+          <div class="form-section__container-right">
+            <h2 class="form-section__heading">Форма выбора локации</h2>
+            <form class="form-section__form" action="#" method="get">
+              <div class="form-section__form-name">
+                <label class="form-section__label" for="first-page-name">Имя</label>
+                <input class="form-section__input" type="text" id="first-page-name" name="name" placeholder="Введите ваше имя">
+              </div>
+              <div class="form-section__form-e-mail">
+                <label class="form-section__label" for="first-page-e-mail">E-mail</label>
+                <input class="form-section__input" type="text" id="first-page-e-mail" name="e-mail" placeholder="Введите ваш E-mail">
+              </div>
+              <div class="form-section__form-tel"">
+                <label class="form-section__label" for="first-page-tel">Телефон</label>
+                <input class="form-section__input" type="tel" id="first-page-tel" name="tel" placeholder="Введите ваш Телефон">
+              </div>
+              <div class="form-section__form-location">
+                <label class="form-section__label" for="locations">Локация</label>
+                <select class="form-section__input--select" id="locations" name="loc">
+                  <option class="form-section__option" value="loc1">Локация 1</option>
+                  <option class="form-section__option" value="loc2">Локация 2</option>
+                  <option class="form-section__option" value="loc3">Локация 3</option>
+                  <option class="form-section__option" value="loc4">Локация 4</option>
+                </select>
+              </div>
+              <input class="form-section__input-btn" type="button" value="Отправить">
+            </form>
+            <p class="form-section__instruction">Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности </p>
+          </div>
+        </div>
+      </section>
+      <section class="application-feedback2">
+        <button class="application-feedback2__close-btn"> 
+          <img class="application-feedback2__close-btn-icon" src="img/close-btn.png" alt="close button img">
+        </button>
+        <article class="application-feedback2__article">
+          <h1 class="application-feedback2__article-heading">Благодарим <br> за оставленную заявку!</h1>
+          <h4 class="application-feedback2__article-sub-heading">Наши специалисты уже обрабатывают <br> 
+            Вашу заявку и свяжутся с Вами в ближайшее время</h4>
+        </article>
+      </section>
     </section>
     <section class="main__studio-decoration studio-decoration">
       <article class="studio-decoration__content">
         <h1 class="studio-decoration__header">Оформление фотостудии</h1>
         <div class="studio-decoration__video-container">
           <iframe class="studio-decoration__video" 
-          src="№">
+          src="#">
           </iframe> 
         </div>
       </article>
@@ -237,8 +280,8 @@
 
   </main>
 
-  <script type="module" src="js/button-func.js"></script>
-  <script type="module" src="js/slider-func.js"></script> 
+  <script src="js/button-func.js"></script>
+  <script src="js/slider-func.js"></script> 
 
   
 </body>

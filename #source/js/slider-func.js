@@ -133,6 +133,7 @@ btnNext2.addEventListener("click", () => {
 
 for (let i = 0; i < slideImg2.length; i++) {
   slideImg2[i].addEventListener("click", event => {
+      document.querySelector(".studio-decoration__header").style.opacity = "0";
       if (i < count2) {
         sliderWrapper2.style.transform = `translate(${-width2 * (count2-2) +"px"})`;
         count2--;
@@ -163,7 +164,7 @@ popUp2.addEventListener("click", (event) => {
   || target.classList.contains("our-location__popup-slider-btn-next")) {
     return;
   }
-
+  document.querySelector(".studio-decoration__header").style.opacity = "";
   popUp2.style.visibility="hidden";
   document.body.style.overflow="";
 })
