@@ -38,7 +38,6 @@ closeApplicationBTN.addEventListener("click", () => {
     }
 });
 
-
 // our-location-form
 
 const chooseLocationBTN = document.querySelector(".our-location__choose-location-btn");
@@ -80,10 +79,9 @@ closeApplicationBTN2.addEventListener("click", () => {
 
 const videoСontainer = document.querySelector(".studio-decoration__video-container");
 videoСontainer.addEventListener("click", (event) => {
-  alert("Здесь можно разместить видео по усмотрению заказчкика");
-/*let video = document.querySelector(".studio-decoration__video");
+  let video = document.querySelector(".studio-decoration__video");
   video.style.visibility ="visible";
-  videoСontainer.style.visibility ="hidden"; */
+  videoСontainer.style.visibility ="hidden";
 })
 
 
