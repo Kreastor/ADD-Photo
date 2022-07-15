@@ -84,7 +84,30 @@ videoСontainer.addEventListener("click", (event) => {
   videoСontainer.style.visibility ="hidden";
 })
 
+// show text
 
+const showTextBTN = document.querySelector(".article__show-fulltext-btn");
+
+showTextBTN.addEventListener("click", (event) => {
+  let textSection = document.querySelector(".article");
+  let text = document.querySelector(".article__text");
+  let btnBox = document.querySelector(".article__show-fulltext-box");
+
+  let showTextBTNAfter = document.querySelector(`.article__show-fulltext-btn > :after`);
+
+  textSection.style.cssText = `height: 1480px;
+                              overflow: visible;`
+  text.style.cssText = `height: auto;
+                        white-space: normal;
+                        overflow: visible;`                  
+  showTextBTN.value = "Скрыть";
+  btnBox.style.cssText = `right: 55px;
+                    bottom: 2%;
+                    transform: translate(-65%, -75%);`
+  showTextBTNAfter.style.cssText = `transform: rotate(180deg);
+                                    left: 95px;`
+
+})
 
 
 
