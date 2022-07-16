@@ -1363,7 +1363,7 @@
   background-color: rgba(242, 244, 244, 1);
   height: 455px;
   overflow: hidden;
-  transition: 0.3s;
+  transition: 0.4s;
 
   &__content {
     display: flex;
@@ -1399,16 +1399,17 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    transition: 0.2s;
+    transition: 0.3s;
   }
 
   &__show-fulltext-box {
-    position: absolute;
-    right: 5%;
-    bottom: 5%;
-    transform: translate(-65%,-45%);
+    transform: translate(-15px, -5px);
     display: flex;
     justify-content: flex-end;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__show-fulltext-btn {
@@ -1424,17 +1425,23 @@
     text-align: center;
     float: right;
 
-    &:hover {
-      cursor: pointer;
-    }
-
-    &::after {
-      content: url(../img/show-text.png);
-      position: absolute;
-      transform: translate(13px,2px);
-    }
-
+    // &::after {
+    //   content: url(../img/show-text.png);
+    //   position: absolute;
+    //   transform: translate(13px,2px);
+    // }
   }
+
+  &__show-fulltext-img {
+    width: 21px;
+    height: 10px;
+    transform: translate(15px, 7px);
+  }
+
+
+
 }
+
+
 
 
