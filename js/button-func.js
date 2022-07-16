@@ -84,7 +84,40 @@ videoСontainer.addEventListener("click", (event) => {
   videoСontainer.style.visibility ="hidden";
 })
 
+// show text
 
+const btnBox = document.querySelector(".article__show-fulltext-box");
+let open = false;
+
+
+btnBox.addEventListener("click", (event) => {
+  let textSection = document.querySelector(".article");
+  let text = document.querySelector(".article__text");
+  let showTextBTN = document.querySelector(".article__show-fulltext-btn");
+  let imgBtn = document.querySelector(".article__show-fulltext-img");
+
+  if (!open) {
+    textSection.style.cssText = `height: 1480px;
+                                overflow: visible;`
+    text.style.cssText = `height: auto;
+                          white-space: normal;
+                          overflow: visible;`                  
+    showTextBTN.innerHTML = "Скрыть";
+    btnBox.style.cssText = `transform: translate( 0, -12px)`;
+    imgBtn.style.cssText = `transform: translateY(7px) rotate(180deg);`;
+    return open = true;
+  } else {
+    textSection.style.cssText = `height: "";
+                                overflow: "";`
+    text.style.cssText = `height: "";
+                          white-space: "";
+                          overflow: "";`                  
+    showTextBTN.innerHTML = "Подробнее";
+    btnBox.style.cssText = `transform:  ""`;
+    imgBtn.style.cssText = `transform:  ""`;
+    return open = false;
+  }
+})
 
 
 
