@@ -1654,6 +1654,9 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   -webkit-column-gap: 23px;
      -moz-column-gap: 23px;
           column-gap: 23px;
@@ -1669,17 +1672,23 @@
           flex-direction: column;
   border-radius: 16px;
   background-repeat: no-repeat;
+  background-image: url(../img/card-1.png);
+  background-color: rgb(242, 244, 244);
+  margin-bottom: 45px;
 }
 .photoshoot-cost__price-card:first-child {
   background-image: url(../img/card-1.png);
+  background-color: rgb(242, 244, 244);
 }
 .photoshoot-cost__price-card:nth-child(2) {
   background-image: url(../img/card-2.png);
+  background-color: rgb(249, 244, 238);
 }
 .photoshoot-cost__price-card:last-child {
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
   background-image: url(../img/card-3.png);
+  background-color: rgb(245, 217, 198);
 }
 .photoshoot-cost__price-card-container {
   padding: 48px 13px 0px 15px;
@@ -1822,7 +1831,7 @@
   padding: 5px;
 }
 .photoshoot-cost__additional-service-item:hover {
-  cursor: pointer;
+  cursor: url(../img/cursor.png), pointer;
 }
 .photoshoot-cost__book-button {
   display: -webkit-box;

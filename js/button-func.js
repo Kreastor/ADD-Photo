@@ -119,7 +119,18 @@ btnBox.addEventListener("click", (event) => {
   }
 })
 
+// Determine the cost of service
 
+let span = document.querySelectorAll(".photoshoot-cost__additional-service-item");
 
-
+for (let i = 0; i < span.length; i++) {
+  span[i].addEventListener("click", event => {
+    // let realSrc = 
+    if (span[i].dataset.src) {
+      alert("Help");
+    } else {
+      alert ("no help")
+    }
+  })
+}
 

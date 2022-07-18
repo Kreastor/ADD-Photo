@@ -1461,6 +1461,7 @@
   &__prices-card-box {
     display: flex;
     flex-wrap: wrap;
+    align-items: baseline;
     column-gap: 23px;
     margin-top: 100px;
   }
@@ -1469,21 +1470,25 @@
     display: flex;
     flex-direction: column;
     border-radius: 16px;
-    // width: 398px;
     background-repeat: no-repeat;
-    // height: 654px;
+    background-image: url(../img/card-1.png);
+    background-color: rgba(242, 244, 244, 1);
+    margin-bottom: 45px;
 
     &:first-child {
       background-image: url(../img/card-1.png);
+      background-color: rgba(242, 244, 244, 1);
     }
 
     &:nth-child(2) {
       background-image: url(../img/card-2.png);
+      background-color: rgba(249, 244, 238, 1);
     }
 
     &:last-child {
       transform: translateY(-20px);
       background-image: url(../img/card-3.png);
+      background-color: rgba(245, 217, 198, 1);
     }
 
   }
@@ -1616,7 +1621,7 @@
     padding: 5px;
 
     &:hover {
-      cursor: pointer;
+      cursor: url(../img/cursor.png), pointer;
     }
   }
 
