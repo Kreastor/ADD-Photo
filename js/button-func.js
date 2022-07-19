@@ -125,11 +125,30 @@ let span = document.querySelectorAll(".photoshoot-cost__additional-service-item"
 
 for (let i = 0; i < span.length; i++) {
   span[i].addEventListener("click", event => {
-    // let realSrc = 
-    if (span[i].dataset.src) {
-      alert("Help");
-    } else {
-      alert ("no help")
+    let currentCard = span[i].closest(".photoshoot-cost__price-card-container");
+    let price = +currentCard.childNodes[3].innerHTML;
+    if (span[i].dataset.src == "help") {
+      span[i].classList.toggle("active");
+    } else if (span[i].dataset.src == "visagiste") {
+      span[i].classList.toggle("active");
+      if (!span[i].classList.contains("active")) {
+        currentCard.childNodes[3].innerHTML = price - 2000; 
+      } else {
+        currentCard.childNodes[3].innerHTML = price + 2000; 
+      }
+    } else if (span[i].dataset.src == "retouch") {
+      let retouchPrice = 0;
+      console.log(retouchPrice);
+      span[i].classList.toggle("active");
+      if (span[i].classList.contains("active")) {
+        let countPhoto = +prompt("Введите количество фото для ретуши");
+        let costAddPhoto = countPhoto * 250;
+        this.retouchPrice = costAddPhoto;
+        currentCard.childNodes[3].innerHTML = price + costAddPhoto; 
+      } else {
+        currentCard.childNodes[3].innerHTML = price - this.retouchPrice; 
+        this.retouchPrice = 0;
+      }
     }
   })
 }

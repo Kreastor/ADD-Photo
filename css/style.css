@@ -1721,6 +1721,11 @@
   line-height: 140%;
   color: #838383;
 }
+.photoshoot-cost__price::after {
+  content: "₽";
+  font-size: 38px;
+  padding: 15px;
+}
 .photoshoot-cost__price--mini::before {
   content: "/ 1 локация";
 }
