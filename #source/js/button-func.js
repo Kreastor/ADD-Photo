@@ -121,64 +121,76 @@ btnBox.addEventListener("click", (event) => {
 
 // Determine the cost of service
 
-let span = document.querySelectorAll(".photoshoot-cost__additional-service-item");
+let spanHelp = document.querySelectorAll(".help");
+let spanVisagiste = document.querySelectorAll(".visagiste");
+let spanRetouch = document.querySelectorAll(".retouch");
 
+for (let i = 0; i < spanHelp.length; i++) {
+  spanHelp[i].addEventListener("click", event => {
+    let currentCard = spanHelp[i].closest(".photoshoot-cost__price-card-container");
+    let price = +currentCard.childNodes[3].innerHTML;
+    spanHelp[i].classList.toggle("active");
+  })
+}
+
+for (let i = 0; i < spanVisagiste.length; i++) {
+  spanVisagiste[i].addEventListener("click", event => {
+    let currentCard = spanVisagiste[i].closest(".photoshoot-cost__price-card-container");
+    let price = +currentCard.childNodes[3].innerHTML;
+    spanVisagiste[i].classList.toggle("active");
+    if (!spanVisagiste[i].classList.contains("active")) {
+      currentCard.childNodes[3].innerHTML = price - 2000; 
+    } else {
+      currentCard.childNodes[3].innerHTML = price + 2000; 
+    }
+  })
+}
+
+const countRetouchForm = document.querySelector(".count-retouch");
+const inputInner = document.querySelector(".count-retouch__input");
+const saveValueBTN = document.querySelector(".count-retouch__save-count-btn");
+const closeForm = document.querySelector(".count-retouch__close-btn");
 
 function inputValidationKey(key) {
   return (key >= '0' && key <= '9') || key == 'ArrowLeft' || key == 'ArrowRight' || key == 'Delete' || key == 'Backspace'|| key == 'Escape'
 }
 
-for (let i = 0; i < span.length; i++) {
-  span[i].addEventListener("click", event => {
-    let currentCard = span[i].closest(".photoshoot-cost__price-card-container");
+for (let i = 0; i < spanRetouch.length; i++) {
+  spanRetouch[i].addEventListener("click", event => {
+    let retouchPrice = 0;
+    let currentCard = spanRetouch[i].closest(".photoshoot-cost__price-card-container");
     let price = +currentCard.childNodes[3].innerHTML;
-    if (span[i].dataset.src == "help") {
-      span[i].classList.toggle("active");
-    } else if (span[i].dataset.src == "visagiste") {
-      span[i].classList.toggle("active");
-      if (!span[i].classList.contains("active")) {
-        currentCard.childNodes[3].innerHTML = price - 2000; 
-      } else {
-        currentCard.childNodes[3].innerHTML = price + 2000; 
-      }
-    } else if (span[i].dataset.src == "retouch") {
-      let retouchPrice = 0;
-      let countRetouchForm = document.querySelector(".count-retouch");
-      let inputInner = document.querySelector(".count-retouch__input");
-      let saveValueBTN = document.querySelector(".count-retouch__save-count-btn");
 
-      span[i].classList.toggle("active");
-      if (span[i].classList.contains("active")) {
-        countRetouchForm.style.visibility = "visible"; 
-        let closeForm = document.querySelector(".count-retouch__close-btn");
-        closeForm.addEventListener("click", () => {
-          countRetouchForm.style.visibility = "";
-          span[i].classList.remove("active");
-        })
-
-        countRetouchForm.addEventListener("keydown", (event) => {
-          if (event.code == 'Escape') {
-            countRetouchForm.style.visibility = "";
-            span[i].classList.remove("active");
-          }
-        })
-
-        saveValueBTN.addEventListener("click", () => {
-          this.retouchPrice = inputInner.value * 250;
-          currentCard.childNodes[3].innerHTML = price + this.retouchPrice; 
-          countRetouchForm.style.visibility = "";
-          span[i].innerHTML = `Дополнительная ретушь <br> фото — ${inputInner.value} шт. / ${this.retouchPrice} ₽`
-        })
-      } else {
-        currentCard.childNodes[3].innerHTML = price - this.retouchPrice; 
-        this.retouchPrice = 0;
+    if (!spanRetouch[i].classList.contains("active")) {
+      countRetouchForm.style.visibility = "visible"; 
+      closeForm.addEventListener("click", () => {
         countRetouchForm.style.visibility = "";
-        span[i].classList.remove("active");
-        span[i].innerHTML = `Дополнительная ретушь <br> фото — 1 шт. / 250 ₽`
-      }
+      })
+
+      countRetouchForm.addEventListener("keydown", (event) => {
+        if (event.code == 'Escape') {
+          countRetouchForm.style.visibility = "";
+        }
+      })
+
+      saveValueBTN.addEventListener("click", () => {
+        this.retouchPrice = inputInner.value * 250;
+        currentCard.childNodes[3].innerHTML = price + this.retouchPrice; 
+        countRetouchForm.style.visibility = "";
+        spanRetouch[i].innerHTML = `Дополнительная ретушь <br> фото — ${inputInner.value} шт. / ${this.retouchPrice} ₽`
+        spanRetouch[i].classList.add("active");
+      })
+    } else {
+      currentCard.childNodes[3].innerHTML = price - this.retouchPrice; 
+      retouchPrice = 0;
+      countRetouchForm.style.visibility = "";
+      spanRetouch[i].classList.remove("active");
+      spanRetouch[i].innerHTML = `Дополнительная ретушь <br> фото — 1 шт. / 250 ₽`;
+      // return spanRetouch[i].innerHTML = `Дополнительная ретушь <br> фото — 1 шт. / 250 ₽`
     }
   })
 }
+
 
 
 
