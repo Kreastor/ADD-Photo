@@ -16,3 +16,7 @@
 .center-img:hover {
   cursor: pointer;
 }
+
+.active {
+  background-color: rgb(196, 198, 200);
+}
