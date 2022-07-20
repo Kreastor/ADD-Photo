@@ -1459,6 +1459,7 @@
   }
 
   &__prices-card-box {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -1667,6 +1668,125 @@
     margin: 35px 0 35px;
   }
 }
+
+.count-retouch {
+  visibility: hidden;
+  position: absolute;
+  width: 680px;
+  height: 309px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 15px;
+
+		&__wrapper {
+      height: 223px;
+      margin: 42px 48px;
+      display: flex;
+      flex-direction: column;
+		}
+
+    &__close-btn {
+      padding: 10px;
+      position: absolute;
+      right: -10px;
+      top: -50px;
+      background-color: #EE7A28;
+      border: 1px solid transparent;
+      border-radius: 100%;
+
+    &:hover {
+      cursor: pointer;
+      border-radius: 100%;
+      background-color: #5e545e;
+    }
+
+    &:active {
+      cursor: pointer;
+      background-color: #EE7A28;
+    }
+  }
+
+		&__header {
+      font-family: var(--montserrat);
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 120%;
+      text-align: center;
+      color: #333333;
+		}
+
+		&__form {
+      display: flex;
+      flex-direction: column;
+      margin: 32px 81px 0;
+		}
+
+		&__label {
+      margin-bottom: 8px;
+      font-family: var(--montserrat);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 12px;
+      color: #121621;
+      opacity: 0.4;
+		}
+
+		&__input {
+      padding: 14px 0 14px 14px;
+      border: 1px solid #DDDEE4;
+      border-radius: 5px;
+  
+      &::placeholder {
+        font-family: var(--montserrat);
+        font-style: normal;
+        font-weight: var(--montserrat-font-weigh);
+        font-size: 12px;
+        line-height: 12px;
+        color: #B1B1B1;
+        opacity: 0.4;
+      }
+		}
+
+		&__save-count-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 144px;
+      background: linear-gradient(180deg, #FFA96B -21.43%, #EE7A28 100%);
+      border-radius: 10px;
+      font-family: var(--montserrat);
+      font-style: normal;
+      font-weight: var(--semiBold-font-weight);
+      font-size: var(--regular-font-size);
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #fff;
+      transition: 0.2s;
+      margin-top: 15px;
+      border-color: transparent;
+
+      &:hover {
+        cursor: pointer;
+        background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+      }
+    
+      &:active {
+        cursor: pointer;
+        background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+        font-size: var(--regular-font-size);
+        line-height: 17px;
+        letter-spacing: 2px;
+        padding: 14px 138px;
+      }
+		}
+}
+
 
 
 

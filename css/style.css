@@ -1649,6 +1649,7 @@
   color: var(--regular-textColor2);
 }
 .photoshoot-cost__prices-card-box {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1880,4 +1881,167 @@
 }
 .photoshoot-cost__book-button--maxi {
   margin: 35px 0 35px;
+}
+
+.count-retouch {
+  visibility: hidden;
+  position: absolute;
+  width: 680px;
+  height: 309px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 15px;
+}
+.count-retouch__wrapper {
+  height: 223px;
+  margin: 42px 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.count-retouch__close-btn {
+  padding: 10px;
+  position: absolute;
+  right: -10px;
+  top: -50px;
+  background-color: #EE7A28;
+  border: 1px solid transparent;
+  border-radius: 100%;
+}
+.count-retouch__close-btn:hover {
+  cursor: pointer;
+  border-radius: 100%;
+  background-color: #5e545e;
+}
+.count-retouch__close-btn:active {
+  cursor: pointer;
+  background-color: #EE7A28;
+}
+.count-retouch__header {
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 120%;
+  text-align: center;
+  color: #333333;
+}
+.count-retouch__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 32px 81px 0;
+}
+.count-retouch__label {
+  margin-bottom: 8px;
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 12px;
+  color: #121621;
+  opacity: 0.4;
+}
+.count-retouch__input {
+  padding: 14px 0 14px 14px;
+  border: 1px solid #DDDEE4;
+  border-radius: 5px;
+}
+.count-retouch__input::-webkit-input-placeholder {
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: var(--montserrat-font-weigh);
+  font-size: 12px;
+  line-height: 12px;
+  color: #B1B1B1;
+  opacity: 0.4;
+}
+.count-retouch__input::-moz-placeholder {
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: var(--montserrat-font-weigh);
+  font-size: 12px;
+  line-height: 12px;
+  color: #B1B1B1;
+  opacity: 0.4;
+}
+.count-retouch__input:-ms-input-placeholder {
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: var(--montserrat-font-weigh);
+  font-size: 12px;
+  line-height: 12px;
+  color: #B1B1B1;
+  opacity: 0.4;
+}
+.count-retouch__input::-ms-input-placeholder {
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: var(--montserrat-font-weigh);
+  font-size: 12px;
+  line-height: 12px;
+  color: #B1B1B1;
+  opacity: 0.4;
+}
+.count-retouch__input::placeholder {
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: var(--montserrat-font-weigh);
+  font-size: 12px;
+  line-height: 12px;
+  color: #B1B1B1;
+  opacity: 0.4;
+}
+.count-retouch__save-count-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 14px 144px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-21.43%, #FFA96B), to(#EE7A28));
+  background: linear-gradient(180deg, #FFA96B -21.43%, #EE7A28 100%);
+  border-radius: 10px;
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: var(--semiBold-font-weight);
+  font-size: var(--regular-font-size);
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin-top: 15px;
+  border-color: transparent;
+}
+.count-retouch__save-count-btn:hover {
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(58.75%, #FFA96B), color-stop(173.44%, #EE7A28));
+  background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+}
+.count-retouch__save-count-btn:active {
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(58.75%, #FFA96B), color-stop(173.44%, #EE7A28));
+  background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+  font-size: var(--regular-font-size);
+  line-height: 17px;
+  letter-spacing: 2px;
+  padding: 14px 138px;
 }

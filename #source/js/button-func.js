@@ -123,6 +123,11 @@ btnBox.addEventListener("click", (event) => {
 
 let span = document.querySelectorAll(".photoshoot-cost__additional-service-item");
 
+
+function inputValidationKey(key) {
+  return (key >= '0' && key <= '9') || key == 'ArrowLeft' || key == 'ArrowRight' || key == 'Delete' || key == 'Backspace'|| key == 'Escape'
+}
+
 for (let i = 0; i < span.length; i++) {
   span[i].addEventListener("click", event => {
     let currentCard = span[i].closest(".photoshoot-cost__price-card-container");
@@ -138,18 +143,43 @@ for (let i = 0; i < span.length; i++) {
       }
     } else if (span[i].dataset.src == "retouch") {
       let retouchPrice = 0;
-      console.log(retouchPrice);
+      let countRetouchForm = document.querySelector(".count-retouch");
+      let inputInner = document.querySelector(".count-retouch__input");
+      let saveValueBTN = document.querySelector(".count-retouch__save-count-btn");
+
       span[i].classList.toggle("active");
       if (span[i].classList.contains("active")) {
-        let countPhoto = +prompt("Введите количество фото для ретуши");
-        let costAddPhoto = countPhoto * 250;
-        this.retouchPrice = costAddPhoto;
-        currentCard.childNodes[3].innerHTML = price + costAddPhoto; 
+        countRetouchForm.style.visibility = "visible"; 
+        let closeForm = document.querySelector(".count-retouch__close-btn");
+        closeForm.addEventListener("click", () => {
+          countRetouchForm.style.visibility = "";
+          span[i].classList.remove("active");
+        })
+
+        countRetouchForm.addEventListener("keydown", (event) => {
+          if (event.code == 'Escape') {
+            countRetouchForm.style.visibility = "";
+            span[i].classList.remove("active");
+          }
+        })
+
+        saveValueBTN.addEventListener("click", () => {
+          this.retouchPrice = inputInner.value * 250;
+          currentCard.childNodes[3].innerHTML = price + this.retouchPrice; 
+          countRetouchForm.style.visibility = "";
+          span[i].innerHTML = `Дополнительная ретушь <br> фото — ${inputInner.value} шт. / ${this.retouchPrice} ₽`
+        })
       } else {
         currentCard.childNodes[3].innerHTML = price - this.retouchPrice; 
         this.retouchPrice = 0;
+        countRetouchForm.style.visibility = "";
+        span[i].classList.remove("active");
+        span[i].innerHTML = `Дополнительная ретушь <br> фото — 1 шт. / 250 ₽`
       }
     }
   })
 }
+
+
+
 

@@ -419,9 +419,9 @@
                     <h5 class="photoshoot-cost__title">Дополнительные услуги</h5>
                   </div>
                   <div class="photoshoot-cost__additional-service-list">
-                    <span class="photoshoot-cost__additional-service-item" data-src="help">Помощь <br> в позировании</span>
-                    <span class="photoshoot-cost__additional-service-item" data-src="visagiste">Визажист <br> + 2000 ₽</span>
-                    <span class="photoshoot-cost__additional-service-item" data-src="retouch">Дополнительная ретушь <br> фото — 1 шт. / 250 ₽</span>
+                    <span class="photoshoot-cost__additional-service-item help" data-src="help">Помощь <br> в позировании</span>
+                    <span class="photoshoot-cost__additional-service-item visagiste" data-src="visagiste">Визажист <br> + 2000 ₽</span>
+                    <span class="photoshoot-cost__additional-service-item retouch" data-src="retouch">Дополнительная ретушь <br> фото — 1 шт. / 250 ₽</span>
                   </div>
                 </section>
                 <button class="photoshoot-cost__book-button">Забронировать</button>
@@ -443,9 +443,9 @@
                     <h5 class="photoshoot-cost__title">Дополнительные услуги</h5>
                   </div>
                   <div class="photoshoot-cost__additional-service-list">
-                    <span class="photoshoot-cost__additional-service-item" data-src="help">Помощь <br> в позировании</span>
-                    <span class="photoshoot-cost__additional-service-item" data-src="visagiste">Визажист <br> + 2000 ₽</span>
-                    <span class="photoshoot-cost__additional-service-item" data-src="retouch">Дополнительная ретушь <br> фото — 1 шт. / 250 ₽</span>
+                    <span class="photoshoot-cost__additional-service-item help" data-src="help">Помощь <br> в позировании</span>
+                    <span class="photoshoot-cost__additional-service-item visagiste" data-src="visagiste">Визажист <br> + 2000 ₽</span>
+                    <span class="photoshoot-cost__additional-service-item retouch" data-src="retouch">Дополнительная ретушь <br> фото — 1 шт. / 250 ₽</span>
                   </div>
                 </section>
                 <button class="photoshoot-cost__book-button">Забронировать</button>
@@ -468,10 +468,24 @@
                     <h5 class="photoshoot-cost__title">Дополнительные услуги</h5>
                   </div>
                   <div class="photoshoot-cost__additional-service-list">
-                    <span class="photoshoot-cost__additional-service-item" data-src="retouch">Дополнительная ретушь <br> фото — 1 шт. / 250 ₽</span>
+                    <span class="photoshoot-cost__additional-service-item retouch" data-src="retouch">Дополнительная ретушь <br> фото — 1 шт. / 250 ₽</span>
                   </div>
                 </section>
                 <button class="photoshoot-cost__book-button photoshoot-cost__book-button--maxi">Забронировать</button>
+              </div>
+            </section>
+            <section class="photoshoot-cost__count-retouch count-retouch">
+              <button class="count-retouch__close-btn"> 
+                <img class="count-retouch__close-btn-icon" src="img/close-btn.png" alt="close button img">
+              </button>
+              <div class="count-retouch__wrapper">
+                <h1 class="count-retouch__header">Дополнительная ретушь фото</h1>
+                <form class="count-retouch__form" action="#" method="get">
+                  <label class="count-retouch__label" for="count-retouch__inpu">Количество</label>
+                  <input class="count-retouch__input" type="text" onkeydown="return inputValidationKey(event.key)" 
+                  id="count-retouch__input" name="count-retouch" placeholder="Введите количество фото для ретуши">
+                  <button class="count-retouch__save-count-btn" type="button">Сохранить</button>
+                </form>
               </div>
             </section>
           </div>
