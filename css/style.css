@@ -1619,6 +1619,10 @@
           transform: translate(15px, 7px);
 }
 
+.article--2 {
+  background-color: rgb(249, 244, 238);
+}
+
 .photoshoot-cost {
   background-image: url(../img/price-block-bg.png);
 }
