@@ -177,7 +177,7 @@
 
   &__article {
     position: relative;
-    max-width: rem(820);
+    max-width: rem(1220);
     height: rem(531);
     margin: rem(149) 0 rem(141) 0;
     z-index: 1;
@@ -186,9 +186,9 @@
       content: "";
       background: url(../img/polygon1.png) 0 0 / 75% no-repeat;
       position: absolute;
-      left: 70%;
+      left: 47%;
       top: 32%;
-      width: prc(180, 820);
+      width: prc(180, 1220);
       padding-top: prc(180, 555);
       z-index: -1;
     }
@@ -270,29 +270,32 @@
   display: none;
   position: absolute;
   left: 102.5px;
-  top: 0;
+  top: 5%;
   width: rem(1035);
   height: rem(560);
   background-color: #fff;  
   border-radius: 15px;
+  z-index: 5;
+  border: 5px solid #B1B1B1;
 
   &__close-btn {
     padding: 10px;
     position: absolute;
     right: -10px;
     top: -50px;
-    background-color: transparent;
+    background-color: #EE7A28;
     border: 1px solid transparent;
+    border-radius: 100%;
 
     &:hover {
       cursor: pointer;
       border-radius: 100%;
-      background-color: #5e545e;
+      background-color: #ee3f28;
     }
 
     &:active {
       cursor: pointer;
-      background-color: #EE7A28;
+      background-color: #ff6e07;
     }
   }
 
@@ -435,12 +438,14 @@
   top: 50%;
   transform: translate(-50%,-50%);
   z-index: 5;
+  border: 5px solid #B1B1B1;
+  border-radius: 15px;
 
   &__close-btn {
     position: absolute;
     right: 0;
     bottom: 100%;
-    background-color: #D8D8D8;
+    background-color: #EE7A28;
     border: 1px solid transparent;
     border-radius: 100%;
     padding: 10px;
@@ -448,12 +453,12 @@
     &:hover {
       cursor: pointer;
       border-radius: 100%;
-      background-color: #EE7A28;
+      background-color: #ee3f28;
     }
 
     &:active {
       cursor: pointer;
-      background-color: #5e545e;
+      background-color:  #ff6e07;
     }
   }
 
@@ -1813,6 +1818,7 @@
   }
 
   &__certificate-box {
+    position: relative;
     max-width: 1240px;
     margin-top: 80px;
     display: flex;
@@ -1914,6 +1920,18 @@
     text-transform: uppercase;
     color: #FFFFFF;
     transform: translate(40px, -10px);
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      cursor: pointer;
+      background-color: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+    }
+  
+    &:active {
+      cursor: pointer;
+      background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+    }
   }
 
   &__bc-img {

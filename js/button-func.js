@@ -1,42 +1,47 @@
 "use strict"
 // start-screen
 
-const getConsultation = document.querySelector(".start-screen__get-consultation-btn");
-const feedbackForm = document.querySelector(".feedback-form");
-
-getConsultation.addEventListener("click", () => {
-  let scroll = document.querySelector(".start-screen");
-  scroll.scrollIntoView({block: "center", behavior: "smooth"});
-  feedbackForm.classList.toggle("show");
-  if (applicationFeedback.classList.contains("show")) {
-    applicationFeedback.classList.remove("show");
-  }
-});
-
-const sendForm = document.querySelector(".feedback-form__input-btn");
-const applicationFeedback = document.querySelector(".application-feedback");
-
-sendForm.addEventListener("click", () => {
-  feedbackForm.classList.remove("show");
-  applicationFeedback.classList.add("show");
-})
-
-const closeFeedbackBtn = document.querySelector(".feedback-form__close-btn")
-
-closeFeedbackBtn.addEventListener("click", (event) => {
-  feedbackForm.classList.remove("show");
-  applicationFeedback.classList.remove("show");
-})
+const getFeedbackForm  = document.querySelectorAll(".get-feedback-form");
+const feedbackForm = document.querySelectorAll(".feedback-form");
+const sendForm = document.querySelectorAll(".feedback-form__input-btn");
+const applicationFeedback = document.querySelectorAll(".application-feedback");
+const closeFeedbackBtn = document.querySelectorAll(".feedback-form__close-btn");
+const closeApplicationBTN = document.querySelectorAll(".application-feedback__close-btn");
 
 
-const closeApplicationBTN = document.querySelector(".application-feedback__close-btn");
-
-closeApplicationBTN.addEventListener("click", () => {
-    feedbackForm.classList.remove("show");
-    if (applicationFeedback.classList.contains("show")) {
-      applicationFeedback.classList.remove("show");
+for (let i = 0; i < getFeedbackForm.length; i++) {
+  getFeedbackForm[i].addEventListener("click", () => {
+    if (i === 0) {
+      let targetScroll = document.querySelector(".start-screen");
+      targetScroll.scrollIntoView({block: "center", behavior: "smooth"});
+    } else if (i === 1) {
+      let targetScroll = document.querySelector(".gift-certificate__certificate-box");
+      targetScroll.scrollIntoView({block: "center", behavior: "smooth"});
     }
-});
+    
+    feedbackForm[i].classList.toggle("show");
+    if (applicationFeedback[i].classList.contains("show")) {
+      applicationFeedback[i].classList.remove("show");
+    }
+
+    sendForm[i].addEventListener("click", () => {
+    feedbackForm[i].classList.remove("show");
+    applicationFeedback[i].classList.add("show");
+    })
+
+    closeFeedbackBtn[i].addEventListener("click", (event) => {
+      feedbackForm[i].classList.remove("show");
+      applicationFeedback[i].classList.remove("show");
+    })
+
+    closeApplicationBTN[i].addEventListener("click", () => {
+      feedbackForm[i].classList.remove("show");
+      if (applicationFeedback[i].classList.contains("show")) {
+        applicationFeedback[i].classList.remove("show");
+      }
+    });
+  });
+}
 
 // our-location-form
 
