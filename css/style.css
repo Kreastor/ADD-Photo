@@ -146,7 +146,7 @@
 }
 .start-screen__article {
   position: relative;
-  max-width: 51.25rem;
+  max-width: 76.25rem;
   height: 33.1875rem;
   margin: 9.3125rem 0 8.8125rem 0;
   z-index: 1;
@@ -155,9 +155,9 @@
   content: "";
   background: url(../img/polygon1.png) 0 0/75% no-repeat;
   position: absolute;
-  left: 70%;
+  left: 47%;
   top: 32%;
-  width: 21.9512195122%;
+  width: 14.7540983607%;
   padding-top: 32.4324324324%;
   z-index: -1;
 }
@@ -242,28 +242,31 @@
   display: none;
   position: absolute;
   left: 102.5px;
-  top: 0;
+  top: 5%;
   width: 64.6875rem;
   height: 35rem;
   background-color: #fff;
   border-radius: 15px;
+  z-index: 5;
+  border: 5px solid #B1B1B1;
 }
 .feedback-form__close-btn {
   padding: 10px;
   position: absolute;
   right: -10px;
   top: -50px;
-  background-color: transparent;
+  background-color: #EE7A28;
   border: 1px solid transparent;
+  border-radius: 100%;
 }
 .feedback-form__close-btn:hover {
   cursor: pointer;
   border-radius: 100%;
-  background-color: #5e545e;
+  background-color: #ee3f28;
 }
 .feedback-form__close-btn:active {
   cursor: pointer;
-  background-color: #EE7A28;
+  background-color: #ff6e07;
 }
 .feedback-form__wrapper {
   display: -webkit-box;
@@ -462,12 +465,14 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 5;
+  border: 5px solid #B1B1B1;
+  border-radius: 15px;
 }
 .application-feedback__close-btn {
   position: absolute;
   right: 0;
   bottom: 100%;
-  background-color: #D8D8D8;
+  background-color: #EE7A28;
   border: 1px solid transparent;
   border-radius: 100%;
   padding: 10px;
@@ -475,11 +480,11 @@
 .application-feedback__close-btn:hover {
   cursor: pointer;
   border-radius: 100%;
-  background-color: #EE7A28;
+  background-color: #ee3f28;
 }
 .application-feedback__close-btn:active {
   cursor: pointer;
-  background-color: #5e545e;
+  background-color: #ff6e07;
 }
 .application-feedback__article {
   display: -webkit-box;
@@ -1619,6 +1624,10 @@
           transform: translate(15px, 7px);
 }
 
+.article--2 {
+  background-color: rgb(249, 244, 238);
+}
+
 .photoshoot-cost {
   background-image: url(../img/price-block-bg.png);
 }
@@ -1636,7 +1645,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 60px;
+  margin: 60px 0 105px;
 }
 .photoshoot-cost__header {
   margin-top: 60px;
@@ -1677,15 +1686,15 @@
   background-color: rgb(242, 244, 244);
   margin-bottom: 45px;
 }
-.photoshoot-cost__price-card:first-child {
+.photoshoot-cost__price-card--mini {
   background-image: url(../img/card-1.png);
   background-color: rgb(242, 244, 244);
 }
-.photoshoot-cost__price-card:nth-child(2) {
+.photoshoot-cost__price-card--standart {
   background-image: url(../img/card-2.png);
   background-color: rgb(249, 244, 238);
 }
-.photoshoot-cost__price-card:last-child {
+.photoshoot-cost__price-card--maxi {
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
   background-image: url(../img/card-3.png);
@@ -2044,4 +2053,159 @@
   line-height: 17px;
   letter-spacing: 2px;
   padding: 14px 138px;
+}
+
+.gift-certificate__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.gift-certificate__header {
+  margin-top: 85px;
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: var(--semiBold-font-weight);
+  font-size: 36px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--regular-textColor2);
+}
+.gift-certificate__certificate-box {
+  position: relative;
+  max-width: 1240px;
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgb(242, 244, 244);
+  border-radius: 25px;
+}
+.gift-certificate__article {
+  margin: 137px 35px 113px 120px;
+}
+.gift-certificate__title {
+  position: relative;
+  max-width: 500px;
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 140%;
+  letter-spacing: 1px;
+  color: var(--regular-textColor3);
+  margin-bottom: 53px;
+}
+.gift-certificate__title::before {
+  content: "СЕРТИФИКАТ НА ФОТОСЕССИЮ";
+  position: absolute;
+  top: -10%;
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  color: #C1C1C1;
+}
+.gift-certificate__bonus-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 25px;
+}
+.gift-certificate__bonus-item {
+  position: relative;
+  padding-left: 40px;
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--regular-textColor3);
+}
+.gift-certificate__bonus-item::before {
+  content: url(../img/check-orange-circle.png);
+  position: absolute;
+  left: 0%;
+}
+.gift-certificate__get-certificate {
+  position: relative;
+  padding-right: 86px;
+}
+.gift-certificate__get-certificate-img {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.gift-certificate__get-certificate-text {
+  max-width: 340px;
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  color: var(--regular-textColor2);
+  -webkit-transform: translate(40px, -30px);
+          transform: translate(40px, -30px);
+}
+.gift-certificate__get-certificate-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 14px 97px;
+  gap: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-21.43%, #FFA96B), to(#EE7A28));
+  background: linear-gradient(180deg, #FFA96B -21.43%, #EE7A28 100%);
+  border-radius: 10px;
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  -webkit-transform: translate(40px, -10px);
+          transform: translate(40px, -10px);
+  position: relative;
+  z-index: 1;
+}
+.gift-certificate__get-certificate-btn:hover {
+  cursor: pointer;
+  background-color: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+}
+.gift-certificate__get-certificate-btn:active {
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(58.75%, #FFA96B), color-stop(173.44%, #EE7A28));
+  background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+}
+.gift-certificate__bc-img {
+  position: absolute;
+  top: 32%;
+  left: -12%;
 }

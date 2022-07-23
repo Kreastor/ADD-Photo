@@ -1,42 +1,47 @@
 "use strict"
 // start-screen
 
-const getConsultation = document.querySelector(".start-screen__get-consultation-btn");
-const feedbackForm = document.querySelector(".feedback-form");
-
-getConsultation.addEventListener("click", () => {
-  let scroll = document.querySelector(".start-screen");
-  scroll.scrollIntoView({block: "center", behavior: "smooth"});
-  feedbackForm.classList.toggle("show");
-  if (applicationFeedback.classList.contains("show")) {
-    applicationFeedback.classList.remove("show");
-  }
-});
-
-const sendForm = document.querySelector(".feedback-form__input-btn");
-const applicationFeedback = document.querySelector(".application-feedback");
-
-sendForm.addEventListener("click", () => {
-  feedbackForm.classList.remove("show");
-  applicationFeedback.classList.add("show");
-})
-
-const closeFeedbackBtn = document.querySelector(".feedback-form__close-btn")
-
-closeFeedbackBtn.addEventListener("click", (event) => {
-  feedbackForm.classList.remove("show");
-  applicationFeedback.classList.remove("show");
-})
+const getFeedbackForm  = document.querySelectorAll(".get-feedback-form");
+const feedbackForm = document.querySelectorAll(".feedback-form");
+const sendForm = document.querySelectorAll(".feedback-form__input-btn");
+const applicationFeedback = document.querySelectorAll(".application-feedback");
+const closeFeedbackBtn = document.querySelectorAll(".feedback-form__close-btn");
+const closeApplicationBTN = document.querySelectorAll(".application-feedback__close-btn");
 
 
-const closeApplicationBTN = document.querySelector(".application-feedback__close-btn");
-
-closeApplicationBTN.addEventListener("click", () => {
-    feedbackForm.classList.remove("show");
-    if (applicationFeedback.classList.contains("show")) {
-      applicationFeedback.classList.remove("show");
+for (let i = 0; i < getFeedbackForm.length; i++) {
+  getFeedbackForm[i].addEventListener("click", () => {
+    if (i === 0) {
+      let targetScroll = document.querySelector(".start-screen");
+      targetScroll.scrollIntoView({block: "center", behavior: "smooth"});
+    } else if (i === 1) {
+      let targetScroll = document.querySelector(".gift-certificate__certificate-box");
+      targetScroll.scrollIntoView({block: "center", behavior: "smooth"});
     }
-});
+    
+    feedbackForm[i].classList.toggle("show");
+    if (applicationFeedback[i].classList.contains("show")) {
+      applicationFeedback[i].classList.remove("show");
+    }
+
+    sendForm[i].addEventListener("click", () => {
+    feedbackForm[i].classList.remove("show");
+    applicationFeedback[i].classList.add("show");
+    })
+
+    closeFeedbackBtn[i].addEventListener("click", (event) => {
+      feedbackForm[i].classList.remove("show");
+      applicationFeedback[i].classList.remove("show");
+    })
+
+    closeApplicationBTN[i].addEventListener("click", () => {
+      feedbackForm[i].classList.remove("show");
+      if (applicationFeedback[i].classList.contains("show")) {
+        applicationFeedback[i].classList.remove("show");
+      }
+    });
+  });
+}
 
 // our-location-form
 
@@ -86,39 +91,39 @@ videoСontainer.addEventListener("click", (event) => {
 
 // show text
 
-const btnBox = document.querySelector(".article__show-fulltext-box");
+const btnBox = document.querySelectorAll(".article__show-fulltext-box");
 let open = false;
 
+for (let i = 0; i < btnBox.length; i++) {
+  btnBox[i].addEventListener("click", (event) => {
+    let textSection = document.querySelectorAll(".article");
+    let text = document.querySelectorAll(".article__text");
+    let showTextBTN = document.querySelectorAll(".article__show-fulltext-btn");
+    let imgBtn = document.querySelectorAll(".article__show-fulltext-img");
 
-btnBox.addEventListener("click", (event) => {
-  let textSection = document.querySelector(".article");
-  let text = document.querySelector(".article__text");
-  let showTextBTN = document.querySelector(".article__show-fulltext-btn");
-  let imgBtn = document.querySelector(".article__show-fulltext-img");
-
-  if (!open) {
-    textSection.style.cssText = `height: 1480px;
-                                overflow: visible;`
-    text.style.cssText = `height: auto;
-                          white-space: normal;
-                          overflow: visible;`                  
-    showTextBTN.innerHTML = "Скрыть";
-    btnBox.style.cssText = `transform: translate( 0, -12px)`;
-    imgBtn.style.cssText = `transform: translateY(7px) rotate(180deg);`;
-    return open = true;
-  } else {
-    textSection.style.cssText = `height: "";
-                                overflow: "";`
-    text.style.cssText = `height: "";
-                          white-space: "";
-                          overflow: "";`                  
-    showTextBTN.innerHTML = "Подробнее";
-    btnBox.style.cssText = `transform:  ""`;
-    imgBtn.style.cssText = `transform:  ""`;
-    return open = false;
-  }
-})
-
+    if (!open) {
+      textSection[i].style.cssText = `height: 100%;
+                                  overflow: visible;`
+      text[i].style.cssText = `height: auto;
+                            white-space: normal;
+                            overflow: visible;`                  
+      showTextBTN[i].innerHTML = "Скрыть";
+      btnBox[i].style.cssText = `transform: translate( 0, -12px)`;
+      imgBtn[i].style.cssText = `transform: translateY(7px) rotate(180deg);`;
+      return open = true;
+    } else {
+      textSection[i].style.cssText = `height: "";
+                                  overflow: "";`
+      text[i].style.cssText = `height: "";
+                            white-space: "";
+                            overflow: "";`                  
+      showTextBTN[i].innerHTML = "Подробнее";
+      btnBox[i].style.cssText = `transform:  ""`;
+      imgBtn[i].style.cssText = `transform:  ""`;
+      return open = false;
+    }
+  })
+}
 // Determine the cost of service
 
 let spanHelp = document.querySelectorAll(".help");

@@ -177,7 +177,7 @@
 
   &__article {
     position: relative;
-    max-width: rem(820);
+    max-width: rem(1220);
     height: rem(531);
     margin: rem(149) 0 rem(141) 0;
     z-index: 1;
@@ -186,9 +186,9 @@
       content: "";
       background: url(../img/polygon1.png) 0 0 / 75% no-repeat;
       position: absolute;
-      left: 70%;
+      left: 47%;
       top: 32%;
-      width: prc(180, 820);
+      width: prc(180, 1220);
       padding-top: prc(180, 555);
       z-index: -1;
     }
@@ -270,29 +270,32 @@
   display: none;
   position: absolute;
   left: 102.5px;
-  top: 0;
+  top: 5%;
   width: rem(1035);
   height: rem(560);
   background-color: #fff;  
   border-radius: 15px;
+  z-index: 5;
+  border: 5px solid #B1B1B1;
 
   &__close-btn {
     padding: 10px;
     position: absolute;
     right: -10px;
     top: -50px;
-    background-color: transparent;
+    background-color: #EE7A28;
     border: 1px solid transparent;
+    border-radius: 100%;
 
     &:hover {
       cursor: pointer;
       border-radius: 100%;
-      background-color: #5e545e;
+      background-color: #ee3f28;
     }
 
     &:active {
       cursor: pointer;
-      background-color: #EE7A28;
+      background-color: #ff6e07;
     }
   }
 
@@ -435,12 +438,14 @@
   top: 50%;
   transform: translate(-50%,-50%);
   z-index: 5;
+  border: 5px solid #B1B1B1;
+  border-radius: 15px;
 
   &__close-btn {
     position: absolute;
     right: 0;
     bottom: 100%;
-    background-color: #D8D8D8;
+    background-color: #EE7A28;
     border: 1px solid transparent;
     border-radius: 100%;
     padding: 10px;
@@ -448,12 +453,12 @@
     &:hover {
       cursor: pointer;
       border-radius: 100%;
-      background-color: #EE7A28;
+      background-color: #ee3f28;
     }
 
     &:active {
       cursor: pointer;
-      background-color: #5e545e;
+      background-color:  #ff6e07;
     }
   }
 
@@ -1356,7 +1361,7 @@
   }
 }
 
-// -------------------------------------------------------------------------article---------------------------------------------------------- 
+// -------------------------------------------------------------------------article / article2----------------------------------------------------- 
 
 .article {
   position: relative;
@@ -1433,8 +1438,11 @@
   }
 
 }
-// -------------------------------------------------------------------------photoshoot-cost---------------------------------------------------------- 
 
+.article--2 {
+  background-color: rgba(249, 244, 238, 1);
+}
+// -------------------------------------------------------------------------photoshoot-cost---------------------------------------------------------- 
 
 .photoshoot-cost {
   background-image: url(../img/price-block-bg.png);
@@ -1444,7 +1452,7 @@
     flex-direction: column;
     align-items: center;
     justify-content:center;
-    margin-top: 60px;
+    margin: 60px 0 105px;
   }
 
   &__header {
@@ -1475,22 +1483,22 @@
     background-image: url(../img/card-1.png);
     background-color: rgba(242, 244, 244, 1);
     margin-bottom: 45px;
+  }
 
-    &:first-child {
-      background-image: url(../img/card-1.png);
-      background-color: rgba(242, 244, 244, 1);
-    }
+  &__price-card--mini {
+    background-image: url(../img/card-1.png);
+    background-color: rgba(242, 244, 244, 1);
+  }
 
-    &:nth-child(2) {
-      background-image: url(../img/card-2.png);
-      background-color: rgba(249, 244, 238, 1);
-    }
+  &__price-card--standart {
+    background-image: url(../img/card-2.png);
+    background-color: rgba(249, 244, 238, 1);
+  }
 
-    &:last-child {
-      transform: translateY(-20px);
-      background-image: url(../img/card-3.png);
-      background-color: rgba(245, 217, 198, 1);
-    }
+  &__price-card--maxi {
+    transform: translateY(-20px);
+    background-image: url(../img/card-3.png);
+    background-color: rgba(245, 217, 198, 1);
   }
 
   &__price-card-container {
@@ -1787,7 +1795,151 @@
 		}
 }
 
+// -------------------------------------------------------------------------gift-certificate---------------------------------------------------------- 
 
+.gift-certificate {
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+  }
+
+  &__header {
+    margin-top: 85px;
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--semiBold-font-weight);
+    font-size: 36px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--regular-textColor2);
+  }
+
+  &__certificate-box {
+    position: relative;
+    max-width: 1240px;
+    margin-top: 80px;
+    display: flex;
+    background-color: rgba(242, 244, 244, 1);
+    border-radius: 25px;
+  }
+
+  &__article {
+    margin: 137px 35px 113px 120px;
+  }
+
+  &__title {
+    position: relative;
+    max-width: 500px;
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 140%;
+    letter-spacing: 1px;
+    color: var(--regular-textColor3);
+    margin-bottom: 53px;
+
+    &::before {
+      content: "СЕРТИФИКАТ НА ФОТОСЕССИЮ";
+      position: absolute;
+      top: -10%;
+      font-family: var(--montserrat);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 120%;
+      letter-spacing: 1px;
+      color: #C1C1C1;
+    }
+  }
+
+  &__bonus-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  &__bonus-item {
+    position: relative;
+    padding-left: 40px;
+    font-family:  var(--montserrat);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--regular-textColor3);
+
+    &::before {
+      content: url(../img/check-orange-circle.png);
+      position: absolute;
+      left: 0%;
+    }
+  }
+
+  &__get-certificate {
+    position: relative;
+    padding-right: 86px;
+  }
+
+  &__get-certificate-img {
+    transform: translateY(-5px);
+  }
+
+  &__get-certificate-text {
+    max-width: 340px;
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--regular-textColor2);
+    transform: translate(40px,-30px);
+  }
+
+  &__get-certificate-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 97px;
+    gap: 10px;
+    background: linear-gradient(180deg, #FFA96B -21.43%, #EE7A28 100%);
+    border-radius: 10px;
+
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transform: translate(40px, -10px);
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      cursor: pointer;
+      background-color: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+    }
+  
+    &:active {
+      cursor: pointer;
+      background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+    }
+  }
+
+  &__bc-img {
+    position: absolute;
+    top: 32%;
+    left: -12%;
+  }
+}
 
 
 
