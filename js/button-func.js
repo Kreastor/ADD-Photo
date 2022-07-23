@@ -86,39 +86,39 @@ videoСontainer.addEventListener("click", (event) => {
 
 // show text
 
-const btnBox = document.querySelector(".article__show-fulltext-box");
+const btnBox = document.querySelectorAll(".article__show-fulltext-box");
 let open = false;
 
+for (let i = 0; i < btnBox.length; i++) {
+  btnBox[i].addEventListener("click", (event) => {
+    let textSection = document.querySelectorAll(".article");
+    let text = document.querySelectorAll(".article__text");
+    let showTextBTN = document.querySelectorAll(".article__show-fulltext-btn");
+    let imgBtn = document.querySelectorAll(".article__show-fulltext-img");
 
-btnBox.addEventListener("click", (event) => {
-  let textSection = document.querySelector(".article");
-  let text = document.querySelector(".article__text");
-  let showTextBTN = document.querySelector(".article__show-fulltext-btn");
-  let imgBtn = document.querySelector(".article__show-fulltext-img");
-
-  if (!open) {
-    textSection.style.cssText = `height: 1480px;
-                                overflow: visible;`
-    text.style.cssText = `height: auto;
-                          white-space: normal;
-                          overflow: visible;`                  
-    showTextBTN.innerHTML = "Скрыть";
-    btnBox.style.cssText = `transform: translate( 0, -12px)`;
-    imgBtn.style.cssText = `transform: translateY(7px) rotate(180deg);`;
-    return open = true;
-  } else {
-    textSection.style.cssText = `height: "";
-                                overflow: "";`
-    text.style.cssText = `height: "";
-                          white-space: "";
-                          overflow: "";`                  
-    showTextBTN.innerHTML = "Подробнее";
-    btnBox.style.cssText = `transform:  ""`;
-    imgBtn.style.cssText = `transform:  ""`;
-    return open = false;
-  }
-})
-
+    if (!open) {
+      textSection[i].style.cssText = `height: 100%;
+                                  overflow: visible;`
+      text[i].style.cssText = `height: auto;
+                            white-space: normal;
+                            overflow: visible;`                  
+      showTextBTN[i].innerHTML = "Скрыть";
+      btnBox[i].style.cssText = `transform: translate( 0, -12px)`;
+      imgBtn[i].style.cssText = `transform: translateY(7px) rotate(180deg);`;
+      return open = true;
+    } else {
+      textSection[i].style.cssText = `height: "";
+                                  overflow: "";`
+      text[i].style.cssText = `height: "";
+                            white-space: "";
+                            overflow: "";`                  
+      showTextBTN[i].innerHTML = "Подробнее";
+      btnBox[i].style.cssText = `transform:  ""`;
+      imgBtn[i].style.cssText = `transform:  ""`;
+      return open = false;
+    }
+  })
+}
 // Determine the cost of service
 
 let spanHelp = document.querySelectorAll(".help");
