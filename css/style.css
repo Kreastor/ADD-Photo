@@ -2049,3 +2049,146 @@
   letter-spacing: 2px;
   padding: 14px 138px;
 }
+
+.gift-certificate__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.gift-certificate__header {
+  margin-top: 85px;
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: var(--semiBold-font-weight);
+  font-size: 36px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--regular-textColor2);
+}
+.gift-certificate__certificate-box {
+  max-width: 1240px;
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgb(242, 244, 244);
+  border-radius: 25px;
+}
+.gift-certificate__article {
+  margin: 137px 35px 113px 120px;
+}
+.gift-certificate__title {
+  position: relative;
+  max-width: 500px;
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 140%;
+  letter-spacing: 1px;
+  color: var(--regular-textColor3);
+  margin-bottom: 53px;
+}
+.gift-certificate__title::before {
+  content: "СЕРТИФИКАТ НА ФОТОСЕССИЮ";
+  position: absolute;
+  top: -10%;
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  color: #C1C1C1;
+}
+.gift-certificate__bonus-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 25px;
+}
+.gift-certificate__bonus-item {
+  position: relative;
+  padding-left: 40px;
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--regular-textColor3);
+}
+.gift-certificate__bonus-item::before {
+  content: url(../img/check-orange-circle.png);
+  position: absolute;
+  left: 0%;
+}
+.gift-certificate__get-certificate {
+  position: relative;
+  padding-right: 86px;
+}
+.gift-certificate__get-certificate-img {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.gift-certificate__get-certificate-text {
+  max-width: 340px;
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  color: var(--regular-textColor2);
+  -webkit-transform: translate(40px, -30px);
+          transform: translate(40px, -30px);
+}
+.gift-certificate__get-certificate-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 14px 97px;
+  gap: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-21.43%, #FFA96B), to(#EE7A28));
+  background: linear-gradient(180deg, #FFA96B -21.43%, #EE7A28 100%);
+  border-radius: 10px;
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  -webkit-transform: translate(40px, -10px);
+          transform: translate(40px, -10px);
+}
+.gift-certificate__bc-img {
+  position: absolute;
+  top: 32%;
+  left: -12%;
+}
