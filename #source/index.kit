@@ -17,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
   <title>ADD Photo</title>
 </head>
 <body>
@@ -82,7 +83,7 @@
                   </div>
                   <input class="feedback-form__input-btn" type="button" value="Отправить">
                 </form>
-                <p class="feedback-form__instruction">Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности </p>
+                <p class="feedback-form__instruction">Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с <u>политикой конфиденциальности</u></p>
               </div>
             </div>
           </section>
@@ -251,7 +252,7 @@
               </div>
               <input class="form-section__input-btn" type="button" value="Отправить">
             </form>
-            <p class="form-section__instruction">Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности </p>
+            <p class="form-section__instruction">Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с <u>политикой конфиденциальности</u></p>
           </div>
         </div>
       </section>
@@ -558,7 +559,7 @@
               <ul class="gift-certificate__bonus-list">
                 <li class="gift-certificate__bonus-item">Креативное оформление</li>
                 <li class="gift-certificate__bonus-item">Открытый календарь</li>
-                <li class="gift-certificate__bonus-item">Всё включено</li>
+                <li class="gift-certificate__bonus-item">Всё включено</li>~
               </ul>
             </article>
             <aside class="gift-certificate__get-certificate">
@@ -592,7 +593,7 @@
                     </div>
                     <input class="feedback-form__input-btn" type="button" value="Отправить">
                   </form>
-                  <p class="feedback-form__instruction">Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности </p>
+                  <p class="feedback-form__instruction">Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с <u>политикой конфиденциальности</u></p>
                 </div>
               </div>
             </section>
@@ -610,7 +611,88 @@
         </article>
       </div>
     </section>
+    <section class="main__reviews reviews">
+      <div class="container">
+        <article class="reviews__content">
+          <h1 class="reviews__header">Отзывы</h1>
+          <div class="reviews__reviews-box">
+            <section class="reviews__review-card">
+              <img class="reviews__review-card-img" src="img/review2.png" alt="review2">
+              <h3 class="reviews__reviewer-name">Мария</h3>
+              <p class="reviews__review-text">Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю.</p>
+            </section>
+            <section class="reviews__review-card">
+              <img class="reviews__review-card-img" src="img/review1.png" alt="review2">
+              <h3 class="reviews__reviewer-name">Сергей</h3>
+              <p class="reviews__review-text">Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю.</p>
+            </section>
+            <section class="reviews__review-card">
+              <img class="reviews__review-card-img" src="img/review3.png" alt="review2">
+              <h3 class="reviews__reviewer-name">Руслан</h3>
+              <p class="reviews__review-text">Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю.</p>
+            </section>
+          </div>
+          <button class="reviews__add-review-btn">Добавить отзыв</button>
+        </article>
+      </div>
+    </section>
+    <section class="main__contacts contacts">
+      <div class="contacts__wrapper"> 
+        <img class="contacts__map-img" src="img/map.png" alt="map">
+        <img class="contacts__contacts-img" src="img/contacts.png" alt="contacts">
+        <section class="contacts__feedback-form">
+          <div class="contacts__container">
+            <h2 class="contacts__heading">Форма обратной связи</h2>
+            <form class="contacts__form" action="#" method="get">
+              <div class="feedback-form__form-name contacts__form-name">
+                <label class="feedback-form__label" for="first-page-name">Имя</label>
+                <input class="feedback-form__input" type="text" id="first-page-name" name="name" placeholder="Введите ваше имя">
+              </div>
+              <div class="feedback-form__form-e-mail">
+                <label class="feedback-form__label" for="first-page-e-mail">E-mail</label>
+                <input class="feedback-form__input" type="text" id="first-page-e-mail" name="e-mail" placeholder="Введите ваш E-mail">
+              </div>
+              <div class="feedback-form__form-tel"">
+                <label class="feedback-form__label" for="first-page-tel">Телефон</label>
+                <input class="feedback-form__input" type="tel" id="first-page-tel" name="tel" placeholder="Введите ваш Телефон">
+              </div>
+              <input class="feedback-form__input-btn" type="button" value="Отправить">
+            </form>
+            <p class="feedback-form__instruction contacts__instruction ">Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с <u>политикой конфиденциальности</u></p>
+          </div>
+        </section>
+      </div>
+    </section>
   </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <section class="footer__logo">
+          <img class="footer__logo-img" src="img/footer-logo.png" alt="footer-logo">
+        </section>
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Портфолио</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Виды работ</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">О фотостудии</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Услуги и цены</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Отзывы</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <hr>
+      <section class="footer__our-social-networks">
+        <p class="footer__text">Наши социцальные сети:</p>
+        <div class="footer__icons-list">
+          <i class="fa fa-instagram icon-instagram icon" aria-hidden="true"></i>
+          <i class="fa fa-facebook icon-facebook icon" aria-hidden="true"></i>
+          <i class="fa fa-twitter icon-twitter icon" aria-hidden="true"></i>
+          <i class="fa fa-paper-plane icon-paper-plane icon" aria-hidden="true"></i>
+        </div>
+      </section>
+    </div>
+  </footer>
 
   <script src="js/button-func.js"></script>
   <script src="js/slider-func.js"></script> 

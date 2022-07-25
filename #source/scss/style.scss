@@ -61,6 +61,11 @@
   max-width: rem(1240);
 }
 
+hr {
+  border: 1px solid rgba(177, 177, 177, 1);
+}
+
+
 .header {
   // margin: 0 auto;
   // max-width: rem(1440);
@@ -70,12 +75,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &__logo {
-  }
-
-  &__logo-img {
   }
 
   &__nav {
@@ -1798,6 +1797,7 @@
 // -------------------------------------------------------------------------gift-certificate---------------------------------------------------------- 
 
 .gift-certificate {
+  margin-bottom: 60px;
 
   &__content {
     display: flex;
@@ -1827,7 +1827,7 @@
   }
 
   &__article {
-    margin: 137px 35px 113px 120px;
+    margin: 137px 35px 75px 120px;
   }
 
   &__title {
@@ -1885,7 +1885,7 @@
   }
 
   &__get-certificate-img {
-    transform: translateY(-5px);
+    transform: translate(5px, -5px);
   }
 
   &__get-certificate-text {
@@ -1897,7 +1897,7 @@
     line-height: 140%;
     text-align: center;
     color: var(--regular-textColor2);
-    transform: translate(40px,-30px);
+    transform: translate(44px,-30px);
   }
 
   &__get-certificate-btn {
@@ -1919,7 +1919,7 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     color: #FFFFFF;
-    transform: translate(40px, -10px);
+    transform: translate(42px, -10px);
     position: relative;
     z-index: 1;
 
@@ -1936,10 +1936,266 @@
 
   &__bc-img {
     position: absolute;
+    max-width: 752px;
     top: 32%;
     left: -12%;
   }
 }
 
+// ------------------------------------------------------------------------Reviews---------------------------------------------------------- 
+
+.reviews {
+  margin-bottom: 100px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+  }
+
+  &__header {
+    margin: 85px 0;
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--semiBold-font-weight);
+    font-size: 36px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--regular-textColor2);
+  }
+
+  &__reviews-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline end;
+    width: 1062px;
+    margin: 0 auto;
+    column-gap: 16px;
+  }
+
+  &__review-card {
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+
+    &:nth-child(2) {
+      transform: translateY(-110px);
+    }
+  }
+
+  &__review-card-img {
+    width: 223px;
+    height: 244px;
+    margin-bottom: 30px;
+  }
+
+  &__reviewer-name {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--regular-textColor3);
+    margin-bottom: 14px;
+  }
+
+  &__review-text {
+    position: relative;
+    font-family:  var(--montserrat);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--regular-textColor2);
+
+    &::before {
+      content: "Показать ещё";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-47%,20%);
+      font-family: var(--montserrat);
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: rgba(233, 117, 34, 1);
+    }
+    
+    &:hover::before {
+      cursor: pointer;
+    }
+  }
+
+  &__add-review-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 64px;
+    gap: 10px;
+    background: linear-gradient(180deg, #FFA96B -21.43%, #EE7A28 100%);
+    border-radius: 10px;
+    transform: translateY(5px);
+
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    &:hover {
+      cursor: pointer;
+      background-color: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+    }
+  
+    &:active {
+      cursor: pointer;
+      background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+    }
+  }
+}
+
+// ------------------------------------------------------------------------Contacts---------------------------------------------------------- 
+
+.contacts {
+  margin-bottom: 60px;
+
+  &__wrapper {
+    position: relative;
+    margin: 90px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__contacts-img {
+    position: absolute;
+    left: 26%;
+    top: 26%;
+    transform: translate(4px,-1px);
+  }
+
+  &__feedback-form {
+
+    background-image: url(../img/card-bgl.png);
+    background-repeat: no-repeat;
+    margin-left: -200px;
+    border-radius: 25px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 81px 36px;
+  }
+
+  &__heading {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 120%;
+    color: var(--montserrat);
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin-bottom: 14px;
+    width: 425px;
+    height: 316px;
+  }
+}
+
+// ------------------------------------------------------------------------Footer---------------------------------------------------------- 
+
+.footer {
+  background-color: rgba(242, 244, 244, 1);
+
+  &__wrapper {
+    display: flex;
+    padding-top: 60px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__logo-img {
+    width: 220px;
+    height: 55px;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    column-gap: 55px;
+  }
+
+  &__nav-item {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--regular-textColor3);
+  }
+
+  &__nav-link {
+    &:active {
+      color: var(--orange-border);
+    } 
+  }
+
+  &__our-social-networks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 0 60px;
+    max-width: 435px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--regular-textColor2);
+  }
+
+  &__icons-list {
+    display: flex;
+    column-gap: 23px;
+  }
+}
+
+.icon {
+  font-size: 36px !important;
+  color: rgba(177, 177, 177, 1);
+
+  &:hover {
+    cursor: pointer;
+    color: rgba(233, 117, 34, 1);
+  }
+}
 
 
