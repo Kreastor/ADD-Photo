@@ -2064,5 +2064,59 @@
       background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
     }
   }
-
 }
+
+// ------------------------------------------------------------------------Contacts---------------------------------------------------------- 
+
+.contacts {
+  margin-bottom: 100px;
+
+  &__wrapper {
+    position: relative;
+    margin: 90px 120px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__contacts-img {
+    position: absolute;
+    left: 26%;
+    top: 26%;
+    transform: translate(4px,-1px);
+  }
+
+  &__feedback-form {
+
+    background-image: url(../img/card-bgl.png);
+    background-repeat: no-repeat;
+    margin-left: -200px;
+    border-radius: 25px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 81px 36px;
+  }
+
+  &__heading {
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 120%;
+    color: var(--montserrat);
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin-bottom: 14px;
+    width: 425px;
+    height: 316px;
+  }
+}
+
