@@ -29,11 +29,11 @@
           </section>
           <nav class="header__nav">
             <ul class="header__nav-list">
-              <li class="header__nav-item"><a href="#" class="header__nav-link">Портфолио</a></li>
-              <li class="header__nav-item"><a href="#" class="header__nav-link">Виды работ</a></li>
-              <li class="header__nav-item"><a href="#" class="header__nav-link">О фотостудии</a></li>
-              <li class="header__nav-item"><a href="#" class="header__nav-link">Услуги и цены</a></li>
-              <li class="header__nav-item"><a href="#" class="header__nav-link">Контакты</a></li>
+              <li class="header__nav-item"><button class="header__nav-link" onclick="navigation('.our-works')">Портфолио</button></li>
+              <li class="header__nav-item"><button class="header__nav-link" onclick="navigation('.types-of-services')">Виды работ</button></li>
+              <li class="header__nav-item"><button class="header__nav-link" onclick="navigation('.article')">О фотостудии</button></li>
+              <li class="header__nav-item"><button class="header__nav-link" onclick="navigation('.photoshoot-cost')">Услуги и цены</button></li>
+              <li class="header__nav-item"><button class="header__nav-link" onclick="navigation('.contacts')">Контакты</button></li>
             </ul>
           </nav>
           <section class="header__contacts">
@@ -49,7 +49,7 @@
       </div>
   </header>
   <main class="main">
-    <section class="main__start-screen start-screen">
+    <section class="main__start-screen start-screen" id="start-screen">
       <div class="start-screen__container container">
         <article class="start-screen__article">
           <h1 class="start-screen__heading">Профессиональная фотосессия в студии</h1>
@@ -100,7 +100,7 @@
         </article>
       </div>
     </section>
-    <section class="main__our-works our-works">
+    <section class="main__our-works our-works"
       <article class="our-works__content">
         <h1 class="our-works__header">Наши работы</h1>
         <div class="our-works__slider">
@@ -672,12 +672,12 @@
         </section>
         <nav class="footer__nav">
           <ul class="footer__nav-list">
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Портфолио</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Виды работ</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">О фотостудии</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Услуги и цены</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Отзывы</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Контакты</a></li>
+            <li class="footer__nav-item"><button class="footer__nav-link" onclick="navigation('.our-works')">Портфолио</button></li>
+            <li class="footer__nav-item"><button class="footer__nav-link" onclick="navigation('.types-of-services')"">Виды работ</button></li>
+            <li class="footer__nav-item"><button class="footer__nav-link" onclick="navigation('.article')">О фотостудии</button></li>
+            <li class="footer__nav-item"><button class="footer__nav-link" onclick="navigation('.photoshoot-cost')"">Услуги и цены</button></li>
+            <li class="footer__nav-item"><button class="footer__nav-link" onclick="navigation('.reviews')">Отзывы</button></li>
+            <li class="footer__nav-item"><button class="footer__nav-link" onclick="navigation('.contacts')">Контакты</button></li>
           </ul>
         </nav>
       </div>

@@ -97,9 +97,16 @@ hr {
     line-height: 20px;
     color: var(--regular-textColor3);
     padding: 10px 0;
+    background-color: transparent;
+    border: 0px solid transparent;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     &:active {
       color: var(--orange-border);
+      cursor: pointer;
     } 
   }
 
@@ -227,7 +234,6 @@ hr {
     font-size: 16px;
     line-height: 26px;
     color: rgba(245, 245, 245, 1);
-    
   }
 
   &__get-consultation-btn {
@@ -526,6 +532,7 @@ hr {
     line-height: 120%;
     text-align: center;
     color: var(--regular-textColor2);
+    margin-top: 120px;
   }
 
   &__slider {
@@ -2146,7 +2153,7 @@ hr {
   &__nav-list {
     display: flex;
     align-items: center;
-    column-gap: 55px;
+    column-gap: 50px;
   }
 
   &__nav-item {
@@ -2159,7 +2166,15 @@ hr {
   }
 
   &__nav-link {
+    background-color: transparent;
+    border: 0px solid transparent;
+
+    &:hover {
+      cursor: pointer;
+    }
+
     &:active {
+      cursor: pointer;
       color: var(--orange-border);
     } 
   }

@@ -1,4 +1,11 @@
 "use strict"
+// navigation
+
+function navigation(classSelector) {
+  const target = document.querySelector(classSelector);
+  target.scrollIntoView({block: "center", behavior: "smooth"});
+};
+
 // start-screen
 
 const getFeedbackForm  = document.querySelectorAll(".get-feedback-form");
