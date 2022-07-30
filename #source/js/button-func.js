@@ -15,7 +15,6 @@ const applicationFeedback = document.querySelectorAll(".application-feedback");
 const closeFeedbackBtn = document.querySelectorAll(".feedback-form__close-btn");
 const closeApplicationBTN = document.querySelectorAll(".application-feedback__close-btn");
 
-
 for (let i = 0; i < getFeedbackForm.length; i++) {
   getFeedbackForm[i].addEventListener("click", () => {
     if (i === 0) {
@@ -31,11 +30,6 @@ for (let i = 0; i < getFeedbackForm.length; i++) {
       applicationFeedback[i].classList.remove("show");
     }
 
-    sendForm[i].addEventListener("click", () => {
-    feedbackForm[i].classList.remove("show");
-    applicationFeedback[i].classList.add("show");
-    })
-
     closeFeedbackBtn[i].addEventListener("click", (event) => {
       feedbackForm[i].classList.remove("show");
       applicationFeedback[i].classList.remove("show");
@@ -49,6 +43,22 @@ for (let i = 0; i < getFeedbackForm.length; i++) {
     });
   });
 }
+
+for (let i = 0; i < sendForm.length; i++) {
+  sendForm[i].addEventListener("click", () => {
+    if (sendForm[i].dataset.src == "justSend") {
+      applicationFeedback[2].classList.add("show");
+
+      closeApplicationBTN[2].addEventListener("click", () => {
+        applicationFeedback[2].classList.remove("show");
+      })
+    } else {
+      feedbackForm[i].classList.remove("show");
+      applicationFeedback[i].classList.add("show");
+    }
+  })
+}
+
 
 // our-location-form
 
@@ -199,7 +209,9 @@ for (let i = 0; i < spanRetouch.length; i++) {
       spanRetouch[i].classList.remove("active");
       spanRetouch[i].innerHTML = `Дополнительная ретушь <br> фото — 1 шт. / 250 ₽`;
       // return spanRetouch[i].innerHTML = `Дополнительная ретушь <br> фото — 1 шт. / 250 ₽`
+      
     }
+    return spanRetouch[i];
   })
 }
 
