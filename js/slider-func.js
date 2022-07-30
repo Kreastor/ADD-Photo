@@ -1,8 +1,4 @@
 "use strict"
-// document.body.addEventListener("click", (event) => {
-//   let target = event.target;
-//   console.log(target);
-// })
 
 // Our works slider 
 const images = document.querySelectorAll(".our-works__slider-img");
