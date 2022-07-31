@@ -1952,6 +1952,7 @@ hr {
 // ------------------------------------------------------------------------Reviews---------------------------------------------------------- 
 
 .reviews {
+  position: relative;
   margin-bottom: 100px;
 
   &__content {
@@ -2070,6 +2071,80 @@ hr {
       cursor: pointer;
       background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
     }
+  }
+}
+
+.reviews-feedback {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-25%);
+  border-radius: 15px;
+  z-index: 5;
+  border: 5px solid #B1B1B1;
+  background-color: #fff;
+
+  &__close-btn {
+  }
+
+  &__close-btn-icon {
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px 20px;
+  }
+
+  &__container-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+  }
+
+  &__img {
+    max-width: 450px;
+    transform: translate(20px,-10px);
+  }
+
+  &__container-right {
+  }
+
+  &__heading {
+    text-align: center;
+    max-width: 600px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin: 32px 25px 4px;
+  }
+
+  &__form-name {
+  }
+
+  &__label {
+  }
+
+  &__input {
+  }
+
+  &__form-e-mail {
+  }
+
+  &__input-textarea {
+    resize: vertical;
+  }
+
+  &__input-btn {
+  }
+
+  &__instruction {
   }
 }
 

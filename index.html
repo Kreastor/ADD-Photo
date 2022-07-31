@@ -635,6 +635,36 @@
           <button class="reviews__add-review-btn">Добавить отзыв</button>
         </article>
       </div>
+      <section class="reviews-feedback">
+        <button class="feedback-form__close-btn reviews-feedback__close-btn"> 
+          <img class="reviews-feedback__close-btn-icon" src="img/close-btn.png" alt="close button img">
+        </button>
+        <div class="reviews-feedback__wrapper">
+          <div class="feedback-form__left reviews-feedback__container-left">
+            <h2 class="feedback-form__heading reviews-feedback__heading">Оставьте отзыв о том,<br> как прошла ваша фотосессия</h2>
+            <form class="reviews-feedback__form" action="#" method="get">
+              <div class="feedback-form__form-name reviews-feedback__form-name">
+                <label class="feedback-form__label reviews-feedback__label" for="first-page-name">Имя</label>
+                <input class="feedback-form__input reviews-feedback__input" type="text" id="first-page-name" name="name" placeholder="Введите ваше имя">
+              </div>
+              <div class="feedback-form__form-e-mail reviews-feedback__form-e-mail">
+                <label class="feedback-form__label reviews-feedback__label" for="first-page-e-mail">E-mail</label>
+                <input class="feedback-form__input reviews-feedback__input" type="text" id="first-page-e-mail" name="e-mail" placeholder="Введите ваш E-mail">
+              </div>
+              <div class="feedback-form__form-tel reviews-feedback__form-textarea">
+                <label class="feedback-form__label reviews-feedback__label" for="first-page-tel">Отзыв</label>
+                <textarea class="feedback-form__input reviews-feedback__input-textarea" type="textarea" id="first-page-textarea" 
+                name="textarea" placeholder="Введите ваш отзыв"></textarea>
+              </div>
+              <input class="feedback-form__input-btn reviews-feedback__input-btn" type="button" value="Отправить">
+              <p class="feedback-form__instruction reviews-feedback__instruction">Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с <u>политикой конфиденциальности</u></p>
+            </form>
+          </div>
+          <div class="feedback-form__container-right reviews-feedback__container-right">
+            <img class="feedback-form__img reviews-feedback__img" src="img/reviews-feedback-img.png" alt="feedback form img">
+          </div>
+        </div>
+      </section>
     </section>
     <section class="main__contacts contacts">
       <div class="contacts__wrapper"> 
