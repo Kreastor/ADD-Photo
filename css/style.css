@@ -2410,8 +2410,8 @@ hr {
 }
 .reviews-feedback__img {
   max-width: 450px;
-  -webkit-transform: translate(20px, -10px);
-          transform: translate(20px, -10px);
+  -webkit-transform: translateX(-5%);
+          transform: translateX(-5%);
 }
 .reviews-feedback__heading {
   text-align: center;
@@ -2431,6 +2431,51 @@ hr {
 .reviews-feedback__input-textarea {
   resize: vertical;
 }
+.reviews-feedback__reviews-application-feedback {
+  top: 70%;
+}
+.reviews-feedback__input-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 14px 144px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-21.43%, #FFA96B), to(#EE7A28));
+  background: linear-gradient(180deg, #FFA96B -21.43%, #EE7A28 100%);
+  border-radius: 10px;
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: var(--semiBold-font-weight);
+  font-size: var(--regular-font-size);
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin-top: 15px;
+  border-color: transparent;
+}
+.reviews-feedback__input-btn:hover {
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(58.75%, #FFA96B), color-stop(173.44%, #EE7A28));
+  background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+}
+.reviews-feedback__input-btn:active {
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(58.75%, #FFA96B), color-stop(173.44%, #EE7A28));
+  background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+  font-size: var(--regular-font-size);
+  line-height: 17px;
+  letter-spacing: 2px;
+}
+
 .contacts {
   margin-bottom: 60px;
 }

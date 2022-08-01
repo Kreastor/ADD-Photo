@@ -3,7 +3,7 @@
 
 function navigation(classSelector) {
   const target = document.querySelector(classSelector);
-  target.scrollIntoView({block: "center", behavior: "smooth"});
+  target.scrollIntoView({block: "start", behavior: "smooth"});
 };
 
 // start-screen
@@ -47,10 +47,10 @@ for (let i = 0; i < getFeedbackForm.length; i++) {
 for (let i = 0; i < sendForm.length; i++) {
   sendForm[i].addEventListener("click", () => {
     if (sendForm[i].dataset.src == "justSend") {
-      applicationFeedback[2].classList.add("show");
+      applicationFeedback[3].classList.add("show");
 
-      closeApplicationBTN[2].addEventListener("click", () => {
-        applicationFeedback[2].classList.remove("show");
+      closeApplicationBTN[3].addEventListener("click", () => {
+        applicationFeedback[3].classList.remove("show");
       })
     } else {
       feedbackForm[i].classList.remove("show");
@@ -59,6 +59,35 @@ for (let i = 0; i < sendForm.length; i++) {
   })
 }
 
+const addReviews = document.querySelector(".reviews__add-review-btn");
+addReviews.onclick = function() {
+  const target = document.querySelector(".reviews__header");
+  target.scrollIntoView({block: "start", behavior: "smooth"});
+
+  const reviewsFeedbackForm = document.querySelector(".reviews-feedback");
+  reviewsFeedbackForm.style.display = "block";
+  
+  const closeBTN = document.querySelector(".reviews-feedback__close-btn");
+  closeBTN.onclick = () => {
+    reviewsFeedbackForm.style.display = "";
+  }
+
+  const reviewsApplication = document.querySelector(".reviews-feedback__reviews-application-feedback");
+
+  const sendFormBTN = document.querySelector(".reviews-feedback__input-btn");
+  sendFormBTN.onclick = () => {
+    reviewsFeedbackForm.style.display = "";
+    reviewsApplication.classList.add("show");
+
+    target.scrollIntoView({block: "start", behavior: "smooth"});
+
+    const reviewsApplicationCloseBtn = document.querySelector(".reviews-feedback__application-feedback-close-btn");
+    reviewsApplicationCloseBtn.onclick = () => {
+      reviewsApplication.classList.remove("show");
+      
+    }
+  }
+}
 
 // our-location-form
 

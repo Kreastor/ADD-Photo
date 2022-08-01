@@ -2085,12 +2085,6 @@ hr {
   border: 5px solid #B1B1B1;
   background-color: #fff;
 
-  &__close-btn {
-  }
-
-  &__close-btn-icon {
-  }
-
   &__wrapper {
     display: flex;
     justify-content: space-around;
@@ -2107,10 +2101,7 @@ hr {
 
   &__img {
     max-width: 450px;
-    transform: translate(20px,-10px);
-  }
-
-  &__container-right {
+    transform: translateX(-5%);
   }
 
   &__heading {
@@ -2125,26 +2116,47 @@ hr {
     margin: 32px 25px 4px;
   }
 
-  &__form-name {
-  }
-
-  &__label {
-  }
-
-  &__input {
-  }
-
-  &__form-e-mail {
-  }
-
   &__input-textarea {
     resize: vertical;
   }
 
-  &__input-btn {
+  &__reviews-application-feedback {
+    top: 70%;
   }
 
-  &__instruction {
+  &__input-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 144px;
+    background: linear-gradient(180deg, #FFA96B -21.43%, #EE7A28 100%);
+    border-radius: 10px;
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--semiBold-font-weight);
+    font-size: var(--regular-font-size);
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 0.2s;
+    margin-top: 15px;
+    border-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+    }
+  
+    &:active {
+      cursor: pointer;
+      background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+      font-size: var(--regular-font-size);
+      line-height: 17px;
+      letter-spacing: 2px;
+
+    }
   }
 }
 
