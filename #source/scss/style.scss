@@ -1952,6 +1952,7 @@ hr {
 // ------------------------------------------------------------------------Reviews---------------------------------------------------------- 
 
 .reviews {
+  position: relative;
   margin-bottom: 100px;
 
   &__content {
@@ -2069,6 +2070,92 @@ hr {
     &:active {
       cursor: pointer;
       background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+    }
+  }
+}
+
+.reviews-feedback {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-25%);
+  border-radius: 15px;
+  z-index: 5;
+  border: 5px solid #B1B1B1;
+  background-color: #fff;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px 20px;
+  }
+
+  &__container-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+  }
+
+  &__img {
+    max-width: 450px;
+    transform: translateX(-5%);
+  }
+
+  &__heading {
+    text-align: center;
+    max-width: 600px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin: 32px 25px 4px;
+  }
+
+  &__input-textarea {
+    resize: vertical;
+  }
+
+  &__reviews-application-feedback {
+    top: 70%;
+  }
+
+  &__input-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 144px;
+    background: linear-gradient(180deg, #FFA96B -21.43%, #EE7A28 100%);
+    border-radius: 10px;
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: var(--semiBold-font-weight);
+    font-size: var(--regular-font-size);
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 0.2s;
+    margin-top: 15px;
+    border-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+    }
+  
+    &:active {
+      cursor: pointer;
+      background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+      font-size: var(--regular-font-size);
+      line-height: 17px;
+      letter-spacing: 2px;
+
     }
   }
 }
