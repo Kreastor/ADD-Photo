@@ -19,7 +19,7 @@
   --orange-border: rgba(233, 117, 34, 1) ;
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
   .container {
     max-width: 54rem;
   }
@@ -58,5 +58,39 @@
     height: 1.9375rem;
     margin: 0;
     font-size: 10px;
+  }
+
+  .start-screen {
+    padding-bottom: 65px;
+  }
+  .start-screen__article {
+    max-width: 54rem;
+    height: auto;
+    margin: 4.375rem 0 0rem 0;
+    z-index: 1;
+  }
+  .start-screen__article::before {
+    left: 46%;
+    top: 37%;
+  }
+  .start-screen__heading {
+    max-width: 755px;
+    font-size: 48px;
+    line-height: 52px;
+  }
+  .start-screen__heading::first-line {
+    letter-spacing: 2.5px;
+  }
+  .start-screen__sub-heading {
+    margin-top: 32px;
+    max-width: 30.5rem;
+    font-size: 24px;
+    line-height: 33.6px;
+  }
+  .start-screen__text {
+    margin-top: 18px;
+  }
+  .start-screen__get-consultation-btn {
+    margin-top: 27px;
   }
 }
