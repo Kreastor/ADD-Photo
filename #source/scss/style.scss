@@ -67,8 +67,6 @@ hr {
 
 
 .header {
-  // margin: 0 auto;
-  // max-width: rem(1440);
 
   &__wrapper {
     min-height: rem(80);
@@ -179,7 +177,7 @@ hr {
 
 .start-screen {
   background-color: rgb(68, 68, 68);
-  height: 860px;
+  padding-bottom: 40px;
 
   &__article {
     position: relative;
@@ -342,18 +340,8 @@ hr {
     height: rem(328);
   }
 
-  &__form-name {
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
-  }
-
-  &__form-e-mail {
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
-  }
-
+  &__form-name,
+  &__form-e-mail,
   &__form-tel {
     display: flex;
     flex-direction: column;
