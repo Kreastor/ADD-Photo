@@ -340,18 +340,8 @@ hr {
     height: rem(328);
   }
 
-  &__form-name {
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
-  }
-
-  &__form-e-mail {
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
-  }
-
+  &__form-name,
+  &__form-e-mail,
   &__form-tel {
     display: flex;
     flex-direction: column;
