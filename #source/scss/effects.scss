@@ -27,6 +27,11 @@
   width: rem(555.71);
   height: rem(618);
   z-index: 0;
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    margin: 0 -25px;
+    width: 406px !important;
+    height: 451px !important;
+  }
 }
 
 .center-img:hover {
