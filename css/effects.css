@@ -12,6 +12,13 @@
   height: 38.625rem;
   z-index: 0;
 }
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .center-img {
+    margin: 0 -25px;
+    width: 406px !important;
+    height: 451px !important;
+  }
+}
 
 .center-img:hover {
   cursor: pointer;

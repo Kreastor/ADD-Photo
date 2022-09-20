@@ -140,6 +140,7 @@
 
     &__get-consultation-btn {
       margin-top: 27px;
+      padding: 22px 26px;
     }
   }
   
@@ -265,6 +266,70 @@
       line-height: 20px;
     }
   }
+}
 
+// -------------------------------------------------------------------------Our-works------------------------------------------------------------ 
 
+.our-works {
+
+  &__header {
+    font-size: 30px;
+    margin-top: 105px
+  }
+
+  .our-works__slider {
+    max-width: 1024px;
+    margin-top: 70px;
+  }
+  .our-works__slider-img {
+    width: 341px;
+    height: 397px
+  }
+
+  .our-works__slider-btn-next {
+    width: 4rem;
+    height: 4rem;
+    right: 185px;
+    top: 43%;
+
+    &::before {
+      left: 33%;
+      top: 15%;
+    }
+  }
+
+  .our-works__slider-btn-prev {
+    width: 4rem;
+    height: 4rem;
+    left: 188px;
+    top: 43%;
+
+    &::before {
+      left: 33%;
+      top: 15%;
+    }
+  }
+
+  &__popup-slider {
+    max-width: 33rem;
+    max-height: 40rem;
+  }
+
+  .our-works__popup-wrapper {
+    transform: translateY(0%);
+  }
+
+  .our-works__popup-slide {
+    width: 100%;
+    height: auto;
+  }
+
+  .our-works__popup-slide-img {
+    width: 33rem;
+    height: auto;
+  }
+
+  .our-works__popup-slide-text {
+    margin-top: 5px;
+  }
 }
